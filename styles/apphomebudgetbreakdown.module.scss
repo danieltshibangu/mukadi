@@ -1,0 +1,135 @@
+.outside {
+    width: 100%;
+    position: relative;
+}
+
+.container1 {
+    width: 57%;
+    height: 80%;
+    background: rgba(189, 214, 245, 0.7);
+    box-shadow: 0px 4px 4px rgba(189, 214, 245, 0.5);
+    border-radius: 10px;
+    margin: 2%;
+    position: relative;
+}
+
+.container2 {
+    height: 100%;
+    width: 60%;
+    background: rgba(213, 225, 85, 0.7);
+    box-shadow: 0px 4px 4px rgba(189, 214, 245, 0.5);
+    border-radius: 10px;
+    margin: 2%;
+    margin-left: 10%;
+    position: relative;
+}
+
+.container-info {
+    padding-left: 7%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin: 0;
+}
+
+.tag-title {
+    font-family: Poppins;
+font-style: normal;
+font-weight: 200;
+font-size: 1.2rem;
+letter-spacing: -0.5px;
+margin: 0;
+color: #191D21;
+
+}
+
+.sub-name {
+    font-family: IBM Plex Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 1.6rem;
+margin: 3% 0 0 0;
+color: #191D21;
+
+}
+
+.sub-price {
+    font-family: Montserrat;
+font-style: normal;
+font-weight: 700;
+font-size: 1rem;
+
+margin: 2% 0 0 0;
+color: #000000;
+
+}
+
+.sub-renew {
+    font-family: Montserrat;
+
+font-weight: 800;
+font-size: 1rem;
+margin: 2% 0 0 0;
+
+color: #656F77;
+}
+
+.side-info {
+    width: 33%;
+    padding:2%;
+}
+
+.side-info-title {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 1.1rem;
+    letter-spacing: -0.5px;
+    margin: 0;
+    padding: 0;
+    color: #191D21;
+}
+
+.side-info-details {
+    font-family: Shippori Mincho;
+font-style: normal;
+font-weight: bold;
+font-size: 2rem;
+margin: 0;
+padding: 0;
+letter-spacing: -0.5px;
+
+color: #191D21;
+
+}
+
+.side-info-date {
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 1rem;
+margin: 0;
+padding: 0 0 8% 0;
+
+color: #656F77;
+}
+
+.subscription-text {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    font-weight: 200;
+    padding: 2%;
+}
+
+.manage-button {
+    position: absolute;
+    right: 10%;
+    bottom: -10%;
+    width: 50%;
+    height: 20%;
+    border-radius: 27px;
+    background-color: #009BFF;
+    color: #fff;
+    border: none;
+    font-family: Poppins;
+    letter-spacing: -0.5px;
+}

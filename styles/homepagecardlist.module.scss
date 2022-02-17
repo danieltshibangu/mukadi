@@ -1,0 +1,101 @@
+.card-list-info {
+    position: relative;
+    width: 26%;
+    height: 30vh;
+}
+
+.back-card {
+    position: absolute;
+    height: 90%;
+    width: 67%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+ 
+}
+
+.inner-banner {
+    background-color: #fff;
+    height: 20%; 
+    margin-top: 30%;  
+}
+
+.curr-card {
+    position: relative;
+    height: 90%;
+    width: 67%;
+    background-color: #000;
+    border-radius: 20px;
+    margin: 20% 0 0 20%;
+    box-shadow: 0px 3.38629px 5.64383px rgba(176, 190, 197, 0.9);
+}
+
+.card-number {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 40%;
+    right: 10%;
+
+    letter-spacing: -0.5px;
+
+    color: #fff;
+}
+
+.exp-text {
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    font-size: 0.7rem;
+    letter-spacing: -0.5px;
+    position: absolute;
+    top: 70%;
+   left: 10%;
+
+    color: #fff;
+
+}
+
+.exp-date {
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: -0.5px;
+    position: absolute;
+    top: 75%;
+   left: 10%;
+}
+
+.card-type {
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: -0.5px;
+    position: absolute;
+    top: 61%;
+   right: 10%;
+
+    color: #fff;
+}
+
+.card-icon {
+    height: 30%;
+    width: 30%;
+    position: absolute;
+    padding-left: 60%;
+    top: 10%;
+}
+
+.card-dots {
+    height: 30%;
+    width: 30%;
+    position: absolute;
+    top: 43%;
+    right: 40%;
+}
+
+.card-number-header {
+    display: flex;
+    align-items: center;
+   
+}

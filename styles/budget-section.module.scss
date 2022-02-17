@@ -1,0 +1,130 @@
+.budget-section {
+    position: relative;
+    width: 50%;
+
+}
+
+.budget-header {
+    display: flex;
+    min-width: 100%;
+}
+
+.title {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: -0.5px;
+    margin: 0;
+    color: #191D21;
+}
+
+.amount {
+    font-family: Shippori Mincho;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+    margin: 0;
+    color: #191D21;
+}
+
+.rate {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 0.7rem;
+    margin: 0;
+    color: rgba(25, 29, 33, 0.5);
+    }
+
+.current-total {
+  padding-left: 3%;
+}
+
+.selection-design {
+    height: 5.3em;
+    width: 5.3em; 
+    border-radius: 100%;
+    background-color: black;;
+}
+
+
+.budget-list {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100vh;
+    height: 13vh;
+    margin-left: 15%;
+}
+
+
+.item-1 {
+    background-color: #344574;
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 3%;
+
+}
+
+.item-2 {
+    background-color: #FFC700;
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    left: 20%;
+}
+
+.item-3 {
+    background-color: #ff743c;
+    z-index: 3;
+    position: absolute;
+    top: 10%;
+    left: 37%;
+}
+
+.item-4 {
+    background-color: #bda79e;
+    z-index: 4;
+    position: absolute;
+    top: 10%;
+    left: 54%;
+}
+
+.budget-name {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 2.1em;
+    letter-spacing: -0.5px;
+    margin: 0;
+    color: #191D21;
+}
+
+.budget-update {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 12px;
+    margin:0;
+    letter-spacing: -0.5px;
+
+    color: rgba(25, 29, 33, 0.5)
+}
+
+.mini-pie-table {
+    width: 50%;
+}
+
+.budget-title {
+    margin-top: 5%;
+    margin-right: 15%;
+
+}
+
+.budget-usage-subtext {
+    font-family: Poppins;
+    font-weight: 200;
+    font-size: 1.3rem;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: #191D21;
+    padding: 5%;
+}

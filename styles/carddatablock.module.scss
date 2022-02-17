@@ -1,0 +1,104 @@
+
+
+.grid-container {
+    display: grid;
+    grid-column-gap: 2%;
+    margin-right: 2%;
+    width: 100%;
+}
+
+.grid-item-1 {
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.grid-item-2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.grid-item-3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.grid-item-3 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+ 
+}
+
+.grid-item-4 {
+}
+
+.title {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: -0.5px;
+    margin: 0;
+    color: #191D21;
+}
+
+.amount {
+    font-family: Shippori Mincho;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+    margin: 0;
+    color: #191D21;
+}
+
+.rate {
+font-family: Poppins;
+font-weight: 600;
+font-size: 0.7rem;
+margin: 0;
+color: rgba(25, 29, 33, 0.5);
+}
+
+.recent-expenses {
+    margin: 1rem;
+    padding-top: 2rem;
+}
+
+.upcoming-charge {
+    margin: 1rem;
+}
+
+.current-total {
+    padding-top: 2rem;
+    margin: 1rem;
+}
+
+.recent-deposit {
+    margin: 1rem;
+}
+
+.more-info { 
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    right: 10%;
+    bottom: -20%;
+    position: absolute;
+}
+
+.info-text {
+    font-family: Shippori Mincho;
+    font-weight: 200;
+    font-size: 1.4rem;
+}
+
+.system-tip {
+    font-family: Poppins;
+    font-weight: 200;
+    font-size: 1.3rem;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: #191D21;
+    position: absolute;;
+    top: -20%;
+    width: 100%;
+}

@@ -1,0 +1,69 @@
+.entire-block {
+    width: 100%;
+}
+
+.earnings {
+    position: absolute;
+    left: 10%;
+}
+
+.savings { 
+    position: absolute;
+    left: 10%;
+    top: 50%;
+}
+
+.expenses {
+    position: absolute;
+    left: 79%;
+    top: 50%;
+}
+
+.budget {
+    position: absolute;
+    left: 79%;
+}
+
+.icon-block { 
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    top: 1rem;
+    left: -5rem;
+
+    /* Accent/Orange */
+
+    background: #F5D4C1;
+    border-radius: 7px;
+}
+
+.title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 20%;
+    letter-spacing: -0.5px;
+    color: #191D21;
+}
+
+.amount {
+    font-family: Shippori Mincho, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 20%;
+    letter-spacing: -0.5px;
+    color: #191D21;
+}
+
+.rate {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.8rem;
+    line-height: 20%;
+    letter-spacing: -0.5px;
+    color: #191D21;
+}
+
