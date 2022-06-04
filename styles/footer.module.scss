@@ -1,0 +1,135 @@
+$eggshell: #F4F1E1;
+$brightorange: #f89a63;
+$darkorange: #d7816a;
+$blue: #6da3d9;
+
+$black : #191D21;
+$white: #F5F0F6;
+$green: #D9F0DC;
+$pink: #FBE6DA;
+
+
+.footer {
+    bottom:-100%;
+    width: 100%;
+    height: 45vh;
+    position: relative;
+  }
+  
+  .footer-wrapper {
+    padding-top: 2%;
+    width: 60%;
+    margin: 0 auto;
+
+    .first {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+
+      img:first-child {
+        height: 3rem;
+      }
+
+      img:nth-child(2) {
+        margin: 0 1rem;
+      }
+    }
+    
+
+    .signup {
+      margin-left: 6.7rem;;
+      p {
+        font-size: 0.9rem;
+        margin: .5rem;
+        
+      }
+    }
+}
+
+
+.second {
+  margin-top: 2rem;;
+  display: flex;
+
+  .what-is-mukadi {
+    width: 30%;
+    
+    p {
+      font-size: 0.9rem;
+      padding: 0 1rem;
+    }
+  }
+
+    .categories {
+      display: grid;
+      width: 100%;
+      padding: 0 5rem;
+      grid-template-columns: [first] 25% [line2] 25% [line3] 25% [line4] 25% [end];
+
+      p {
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        font-size: 1.2rem;
+        font-family: 'Nunito Sans';
+        color: $black;
+      }
+
+      li {
+        padding-bottom: 0.5rem;;
+      }
+
+      li:hover {
+        font-weight: 400;
+      }
+    }
+}
+
+.follow-us {
+    margin: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 2rem;
+    color: $black;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+
+    img:first-child {
+        $icon-size: 2rem;
+        height: $icon-size;
+    }
+
+    img:nth-child(2) {
+        $icon-size: 2rem;
+        height: $icon-size;
+        margin: 0 1.5rem;
+    }
+}
+}
+ 
+
+// optimization for mobile devices
+@media (min-width: 320px) and (max-width: 999px) {
+
+  // Mobile and tablet CSS
+
+}
+
+@media (min-width: 1000px) {
+
+  // Laptop/desktop CSS
+
+}

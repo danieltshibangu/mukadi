@@ -1,0 +1,67 @@
+.post {
+    padding: 0.9rem;
+    height: 31vh;
+    width: 70vh;
+    display: grid;
+    grid-template-columns: [start] 40% [middle] 60% [end]; 
+    border-radius: 20px;
+    
+
+    .postInfo {
+        padding: 0 2rem;
+        position: relative;
+
+        .profile {
+            background-color: black;
+            border-radius: 500px;
+            $size: 2.5rem;
+            width: $size;
+            height: $size;
+            margin: 0 1rem 0 0;
+        }
+
+        .author {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .postTitle {
+            font-family: 'Poppins';
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .text {
+            font-family: 'Poppins';
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: rgb(0, 0, 0, 0.5);
+            margin: 1rem 0;
+        }
+
+        .date {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: rgb(0, 0, 0, 0.4);
+        }
+
+        i {
+            position: absolute;
+            right: 1rem;
+            bottom: 0.5rem;
+            color:rgb(0, 0, 0, 0.4);
+            font-size: 2rem;;
+        }
+    
+    }
+
+    .smallImage {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+        border-radius: 20px;;
+        height: 100%;   
+    }
+
+    
+}

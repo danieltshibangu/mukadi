@@ -1,0 +1,62 @@
+$black : #191D21;
+$white: #F5F0F6;
+$green: #D9F0DC;
+$pink: #FBE6DA;
+$darkorange: #FF743C;
+$lightorange: #FF896D;
+$darkpink: #FFD7C3;
+$darkgreen:#7FD1AE;
+
+.header {
+    position: fixed;
+    $sidebar-width: 6%;
+    left: $sidebar-width; // this is the width of the sidebar
+    top: 0;
+    height: 15vh;
+    width: 100% - $sidebar-width; 
+    background: #fff;
+    z-index: 20;
+    
+
+    .content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        padding: 2rem 2rem 0 2rem;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .message {
+        width: 30%;
+        margin-left: 1rem;
+
+        .main-text {
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 800;
+            font-size: 2.4rem;
+        }
+    }
+
+    .notif-profile {
+        font-size: 1.7rem;
+        margin: 0 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 20%;
+
+        .profile-details {
+            .profile-content {
+                img {
+                    border-radius: 100px;
+                    $profile-size: 65px;
+                    height: $profile-size;
+                    width: $profile-size;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

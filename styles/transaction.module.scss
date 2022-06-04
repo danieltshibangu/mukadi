@@ -1,0 +1,55 @@
+$black : #191D21;
+$white: #F5F0F6;
+$green: #D9F0DC;
+$pink: #FBE6DA;
+$darkorange: #FF743C;
+$lightorange: #FF896D;
+$darkpink: #FFD7C3;
+$darkgreen:#7FD1AE;
+$backwhite: #F1F4F9;
+$backwhite: #F1F4F9;
+
+.content {
+    padding: 1.2rem 1.1rem;;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .typeIcon {
+        background-color: #f8f8ff;
+        $size: 3rem;
+        height: $size;
+        width: $size;
+        border-radius: 10px;;
+        display: flex;
+        align-items: center;
+        justify-content: center;;
+    }
+
+    .title {
+        font-weight: 600;;
+        font-size: 1.3rem;;
+    }
+
+    .date {
+        font-size: 0.9rem;
+        font-weight: 400;;
+        color: rgb(0,0,0,0.5);
+    }
+
+    .amount {
+        font-weight: 600;;
+        font-size: 1.3rem;;
+    }
+
+    .card {
+        background-color: $pink;
+        padding: 0.8rem;
+        width:max-content;
+        border-radius: 10px;
+        font-size: 0.9rem;;
+        font-weight: 700;
+        color: rgba($black, 0.5);
+        text-align: center;
+    }
+}

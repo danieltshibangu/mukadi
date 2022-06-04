@@ -1,0 +1,884 @@
+$eggshell: #F4F1E1;
+$brightorange: #f89a63;
+$darkorange: #d7816a;
+$blue: #6da3d9;
+
+$black : #191D21;
+$white: #F5F0F6;
+$green: #D9F0DC;
+$pink: #FBE6DA;
+
+@media (min-width: 1000px) {
+    .headerStyle2 {
+        height: 130vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 5rem 0;
+
+        .bannerContent {
+
+            
+
+        .introCopy {
+            font-size: 4.5rem;
+            font-family: 'Caladea', serif;
+            font-weight: 600;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 50%;
+            
+        }
+
+        .copydetail {
+            font-size: 1.2rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color:rgb(0, 0, 0, 0.5);
+            text-align: center;
+            line-height: 2;
+            margin: 1.5rem auto;
+            max-width: 30%;
+        }
+
+        .imageLineUp {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            overflow-x: auto;
+
+            img {
+                height: 50vh;
+                border-radius: 10px;;
+            }
+        }
+
+        .joinListBar {
+            width: 20%;
+            margin: 2rem auto 0 auto;
+        }
+    }
+
+    }
+
+
+    .landing-page-front {
+        margin: 0 0 0 5rem;
+        height: 80vh;
+        position: relative;
+
+        .content {
+            width: 40%;
+            margin: 10rem 0 0 7rem;
+
+            .copy-title {
+                font-size: 3.5rem;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+                padding: 0 0 2rem 0;
+            }
+
+            .copy-info {
+                padding: 0 0 2rem 0;
+                font-size: 1rem;
+                width: 80%;
+            }
+
+            .action-supertitle {
+                padding-bottom: 0.5rem;
+                color: #FF743C;
+                
+            } 
+
+            .incentive-list {
+                margin-top: 3rem;
+                display: flex;
+
+                .incentives {
+                display: flex;
+                padding: 0 1rem;
+                align-items: center;
+                
+                p{ 
+                    font-size: 0.9rem;
+                    text-align: center;
+                    padding-left: 0.5rem;
+                }
+                
+                i {
+                    font-size: 2rem;
+                }
+            }
+            }
+
+            
+        }
+
+        .landing-page-image {
+            position: absolute;
+            right: 0;
+            top: -10%;
+            width: 60%;
+            height: 70vh;
+            
+            .img1 {
+                display: none;;
+                height: 30vh;
+                width: 30%;
+                position: absolute;
+                left: 20%;
+                bottom: 0;
+                background-image: url('/wallet.jpg');
+                background-size: cover;
+                border-radius: 70px 0 70px 0;
+                z-index: 5;
+            }
+
+            // .shadow1 {
+            //     height: 30vh;
+            //     width: 30%;
+            //     position: absolute;
+            //     left: 22%;
+            //     bottom: -3%;
+            //     background-color: #BDD6F5;
+            //     border-radius: 70px 0 70px 0;
+            //     z-index: 2;
+            // }
+
+            .img2 {
+                height: 49vh;
+                width: 40%;
+                position: absolute;
+                left: 47%;
+                top: -5%;
+                background-image: url('/asleep.jpg');
+                background-position: 0 -10rem; /* Center the image */
+                background-repeat: no-repeat; /* Do not repeat the image */
+                background-size: cover;
+                border-radius: 70px 0 70px 0;
+                z-index: 3;
+            }
+
+            .shadow2 {
+                height: 49vh;
+                width: 40%;
+                position: absolute;
+                left: 50%;
+                top: -2%;
+                background-color: #6ED47C;
+                opacity: 0.5;
+                border-radius: 70px 0 70px 0;
+                z-index: 2;
+            }
+
+            .credit-card-info {
+                width: 40%;
+                position: absolute;
+                z-index: 5;
+                bottom: -2rem;
+                right: 12rem;
+            }
+
+            .app-content2 {
+                width: 41%;
+                height: 65%;
+                position: absolute;
+                z-index: 1;
+                bottom: 15%;
+                left: 0%;
+            }
+
+            .quote {
+                display: none;
+                width: 41%;
+                position: absolute;
+                z-index: 7;
+                right: 5%;
+                bottom: 30%;
+                
+            }
+
+            .app-content3 {
+                position: absolute;
+                z-index: 8;
+                top: 0rem;
+                left: 28%;
+            }
+        }
+
+
+    }
+
+    // for all subtitles 
+    .subtitle {
+        text-transform: uppercase;
+        font-family: 'Archive';
+        color: rgb(0, 0, 0, 0.3);
+        font-size: 1rem;
+    }
+
+    /* 3 key features section */
+    .key-features {
+        
+
+        .exploreHow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        
+            .content {
+                max-width: 74%;
+                
+                .benefits {
+                    display: flex;
+                    align-items: center;
+                    
+                    padding: 3rem;
+
+                    .attentionText {
+                        .mainText {
+                            font-size: 3.7rem;
+                            width: 70%;
+                            font-family: 'Poppins';
+                            font-weight: 300;
+                            color:#191D21;
+                        }
+
+                        .inviteBtn {
+                            width: 42vh;
+                            height: 6vh;
+                            text-transform: uppercase;
+                            font-family: 'Archive';
+                        }
+                    }
+
+                    .details {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: [top] auto [line1] auto [line2] auto [bottom] ;
+                        row-gap: 3rem;;
+                        column-gap: 3rem;
+        
+                        .asset {
+                            display: flex;
+                            gap: 2rem;
+
+                            i {
+                                font-size: 2rem;
+                            }
+
+                            p {
+                                color:rgb(0, 0, 0, 0.3);
+                                font-size: 0.9rem;
+                                font-weight: 500;
+                            }
+
+                            h5 {
+                                font-family: 'Poppins';
+                                font-weight: 600;
+                                font-size: 1rem;
+                                color:#191D21;
+                            }
+                            
+                        }
+                    }
+                }
+
+                
+        
+        
+                .intro {
+                    font-family: 'Bariol', cursive;
+                    font-style: italic;
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 1.8rem;;
+                    color: #FFC700;
+                    
+                }
+        
+                .introBottom {
+                    font-family: 'Poppins', cursive;
+                    font-style: bold;
+                    text-align: center;
+                    font-weight: 500;
+                    font-size: 2rem;;
+                    margin-bottom: 2rem;;
+                }
+        
+                
+            }
+        }
+        
+    }
+
+    .founderMessage {
+        height: 100vh;
+        width: 100%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        .content {
+            width: 75%;
+
+            .founderSub {
+                font-family: 'Bariol', cursive;
+                font-style: italic;
+                text-align: center;
+                font-weight: 600;
+                font-size: 1.8rem;;
+                color: #FFC700;
+            }
+        
+
+            .mission {
+                display: grid;
+                grid-template-columns: 40% 60%;
+                grid-template-rows: auto;
+                margin: 3rem auto;
+                justify-content: center;
+                padding: 0 3rem;
+                align-items: baseline;
+
+                h3 {
+                    padding: 0 2rem;
+                    line-height: 1.4;
+                    font-weight: 700;
+                    font-family: 'Caladea', serif;
+                }
+
+                p {
+                    padding: 2rem;
+                    line-height: 2;
+                }
+            }
+
+        }
+    }
+
+    .keyFeature1 {
+        height: 70vh;
+        width: 90%;
+        background: linear-gradient(to right top, #e5ffdc, #e1fbdc, #def8dc, #dbf4dc, #d9f0dc);
+        margin: 5% auto;
+        border-radius: 20px;;
+        
+        .bannerContent {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            -webkit-box-align: center;
+            align-items: center;
+            height: 100%;
+            gap: 80px;
+
+            .riskImages {
+            }
+
+            .riskInfo {
+                width: 54%;
+            }
+
+            .riskTitle {
+                font-family: 'Bariol', cursive;
+                font-style: italic;
+                font-weight: 600;
+                font-size: 1.8rem;
+                color: #ff0a0a;
+            }
+
+            .riskHeader {
+                font-family: 'Caladea', serif;
+                font-weight: 600;
+                font-size: 3rem;
+                margin: 1rem 0;
+            }
+
+            .riskDetail {
+                line-height: 2;
+            }
+        }
+    }
+
+
+    .generalFeatures {
+        display: flex;
+        justify-content: center;
+
+        .content {
+            margin: 5rem 0;
+
+            .featureSub {
+                font-family: 'Bariol', cursive;
+                font-style: italic;
+                font-weight: 600;
+                font-size: 2rem;
+                color: $brightorange;
+                text-align: center;
+            }
+
+            .featureTitle {
+                font-family: 'Caladea', serif;
+                font-weight: 600;
+                font-size: 3rem;
+                margin: 1rem 0;
+                text-align: center;
+            }
+
+            .features {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: [top] auto [middle] auto [bottom];
+                row-gap: 3rem;;
+                padding: 0 15rem;
+                margin-top: 8rem;
+                justify-content: center;
+
+                div {
+                    text-align: center;
+                    padding: 1rem;
+                    
+                    
+
+                    i {
+                        font-size: 2.4rem;
+                        margin-bottom: 2rem;
+                        position: relative;
+                        
+                        
+                        .circle {
+                            position: absolute;
+                            background-color: #6da3d9;
+                            border-radius: 100px;
+                            $size: 3rem;
+                            height: $size;
+                            width: $size;
+                            opacity: 0.2;
+                            top: -50%;;
+                            right: -50%;
+                        }
+                    }
+
+                    p {
+                        color:rgb(0, 0, 0, 0.3);
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        margin: 1rem auto;
+                        width: 70%;
+                    }
+
+                    h5 {
+                        font-family: 'Poppins';
+                        font-weight: 600;
+                        font-size: 1rem;
+                        color:#191D21;
+                        margin: 0 auto;
+                        width: 70%;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .aboutus {
+        
+        margin: 5rem auto;
+        
+        .bannerContent {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            -webkit-box-align: center;
+            align-items: center;
+
+            .sideImage {
+
+                img { 
+                    height: 70vh;
+                    border-radius: 0 20px 0 20px;
+                    margin-left: 17rem;
+                }
+            }
+
+            .title {
+                font-family: 'Archive';
+                font-weight: 600;
+                font-size: 1.4rem;
+                color: rgba($black, 0.3);
+            }
+
+            .aboutUsCopy {
+                font-family: 'Poppins';
+                font-weight: 400;
+                font-size: 4rem;
+                margin: 1rem 0;
+            }
+
+            .aboutUsDetails {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: [start] auto [middle] auto [bottom];
+                row-gap: 2rem;
+                column-gap: 2rem;
+                margin: 5rem 0;
+                
+                div {
+                    width: 70%;
+
+                    p {
+                        color:rgb(0, 0, 0, 0.5);
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        margin: 1rem auto;
+                    }
+
+                    h5 {
+                        font-family: 'Poppins';
+                        font-weight: 600;
+                        font-size: 1rem;
+                        color:#191D21;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // content section that displays key features of application
+    .assets {
+        margin: 20rem 8rem;
+
+        .asset-detail {
+            width: 40rem;
+        }
+
+        .asset-format {
+            display: grid;
+            grid-template-columns: [first] 50% [line2] 50% [end];
+            margin-top: 8rem;
+
+
+            .sub-content {
+                grid-column-start: first;
+                grid-column-end: end;
+                display: grid;
+                grid-template-columns: [first] 50% [line2] 50% [end];
+                padding: 10rem;
+                height: 70vh;
+
+                .a-side {
+                    position: relative;
+                
+        
+                    .img1 {
+                        $imagesize: 30vh;
+                        height: $imagesize;
+                        width: $imagesize * 1.5;
+                        left: 1.3rem;
+                        bottom: -8.3rem;
+                        position: absolute;
+                        background-size: cover;
+                        border-radius: 70px 0 70px 0;
+                        z-index: 5;
+                        background-image: url('/disney-sub.jpg');
+                    }
+        
+                    .shadow1 {
+                        $imagesize: 30vh;
+                        height: $imagesize;
+                        width: $imagesize * 1.5;
+                        position: absolute;
+                        left: 0;
+                        bottom: -7rem;
+                        background-color: #BDD6F5;
+                        border-radius: 70px 0 70px 0;
+                        z-index: 2;
+                    }
+        
+                    .sub-image {
+                        background-color: #FFC700;
+                        border-radius: 20px;
+                        width: 70%;
+                        height: 40vh;
+                        position: absolute;
+                        z-index: 1;
+                        right: 12%;
+                        top: -7rem;
+                    }
+        
+                    .dotwall {
+                        position: absolute;
+                        z-index: 0;
+                    }
+                }
+            }
+
+            .spending-content {
+                grid-column-start: first;
+                grid-column-end: end;
+                display: grid;
+                grid-template-columns: [first] 50% [line2] 50% [end];
+                padding: 20rem 10rem 20rem 10rem;
+                height: 70vh;
+
+                .b-side {
+                    position: relative;
+                
+        
+                    .img1 {
+                        $imagesize: 30rem;
+                        height: $imagesize;
+                        width: $imagesize;
+                        right: 0;
+                        bottom: -8.3rem;
+                        position: absolute;
+                        background-size: cover;
+                        background-position: center;
+                        border-radius: 500px;
+                        z-index: 1;
+                        background-image: url('/food.jpg');
+                    }
+
+
+                    .shadow1 {
+                        $imagesize: 15rem;
+                        height: $imagesize;
+                        width: $imagesize;
+                        position: absolute;
+                        left: 10rem;
+                        bottom: -11rem;
+                        background-color: #BDD6F5;
+                        border-radius: 500px;
+                        z-index: 2;
+                    }
+        
+                    .spend-detail {
+                        display: none;
+                        background-color: #FFC700;
+                        border-radius: 20px;
+                        width: 70%;
+                        height: 40vh;
+                        position: absolute;
+                        z-index: 1;
+                        right: 12%;
+                        top: -7rem;
+                    }
+                }
+            }
+
+            .risk-content {
+                grid-column-start: first;
+                grid-column-end: end;
+                display: grid;
+                grid-template-columns: [first] 50% [line2] 50% [end];
+                padding: 10rem;
+                height: 70vh;
+
+                .a-side {
+                    position: relative;
+                
+        
+                    .img1 {
+                        $imagesize: 50vh;
+                        height: $imagesize;
+                        width: 70%;
+                        left: 1.3rem;
+                        bottom: -2rem;
+                        position: absolute;
+                        background-size: cover;
+                        background-position: center;
+                        border-radius: 40px;
+                        z-index: 5;
+                        background-image: url('/card-risk.jpg');
+                    }
+                }
+            }
+            
+        }
+
+    }
+
+    // section title headers and quotes
+    .section-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.1vw;
+        margin: 0 auto;
+        justify-content: center;
+        display: flex;
+        margin-top: 2%;
+    }
+
+    .section-subtitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1% 0;
+
+        p {
+            font-size: 1.1vw;
+            font-weight: 200;
+            padding: 0 1%;
+        }
+
+        i {
+            font-size: 1.8vw;
+        }
+    }
+
+    .section-description {
+        text-align: center;
+        margin: 0 0 2% 0;
+        font-size: 0.9vw;
+    }
+
+
+    // inclusion section for extra features 
+    .inclusion {
+        background-color: $pink;
+        height: 30vh;
+        width: 100%;
+        margin: 0 0 10rem 0;
+    }
+
+
+
+    // blog section 
+    .blog {
+        position: relative;
+        width: 80%;
+        height: 70vh; 
+        background-image: url('/finance-image.jpg');
+        background-position: 0 90%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        .inner-block {
+            position: absolute;
+            width: 90%;
+            height: 50vh;
+            top: 12vh;
+            left: 5%; 
+            display: flex;
+            filter: drop-shadow(0px 3.38629px 5.64383px rgba(176, 190, 197, 0.7));
+
+
+            .inner-block-details {
+                min-width: 60%;
+                min-height: 40%;
+                margin-left: 0%;
+                background-image: url('/finance-image.jpg');
+                background-position: 0 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                .inner-block-format {
+                    width: 50%;
+                    margin: 3% 0 0 5%;
+
+                    .inner-block-logo {
+                        height: 4rem; 
+                        opacity: 0.5;
+                    }
+                }
+
+                .page-flip {
+                    position: absolute;
+                    bottom: 5%; 
+                    left: 4%;
+                    color: $white;
+                    display: flex;
+                    align-items: center;
+                }
+
+            
+            } 
+
+            .blog-title {
+                font-size: 3vw;
+                padding: 0 10%;
+                margin-top: 7%;
+                font-weight: 600; 
+                line-height: 90%;
+                font-family: 'Nunito Sans', sans-serif;
+                text-align: center;
+                color: $black;
+            }
+
+            .author-format {
+                margin-top: 10%;
+                text-align: center;
+            }
+
+            .text-area {
+                width: 40%; 
+                background-color: #fff;
+
+                .post-snippet {
+                    margin-top: 20%;;
+                    text-align: center;
+                    padding: 0 10%;
+                }    
+            
+            }
+
+
+            
+        }
+    }
+}
+
+// animation for fading up
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 100px, 0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: both
+}
+
+.animated2 {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}

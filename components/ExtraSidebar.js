@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/extrasidebar.module.scss'
-import SidebarSavingsGraph from './charts/SidebarSavingsGraph';
+import SidebarSavingsGraph from '../charts/SidebarSavingsGraph';
 
 function ExtraSidebar() {
   return (

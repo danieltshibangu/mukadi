@@ -1,0 +1,101 @@
+$black : #191D21;
+$white: #F5F0F6;
+$green: #D9F0DC;
+$pink: #FBE6DA;
+$darkorange: #FF743C;
+$lightorange: #FF896D;
+$darkpink: #FFD7C3;
+$darkgreen:#7FD1AE;
+$backwhite: #f8f8ff;
+$blue: #0d6efd;
+
+.blog {
+    width: 100%;
+    background-color: rgba($blue, 0.05);
+
+    .split {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .content {
+            height: 65vh;
+            width: 70%;
+            border-radius: 20px;
+            background-color: #fff;
+            position: relative;
+            display: grid;
+            padding: 2rem;
+            grid-template-columns: [start] 40% [middle] 60% [end];
+
+            .longImage {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 20px;
+            }
+
+            .introText {
+                color:rgba($black, 0.7);
+                padding: 2rem;
+                line-height: 1.5rem;;
+
+                .tags {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    div {
+                        background-color: $green;
+                        padding: .5rem;
+                        border-radius: 10px;
+                        
+                    }
+                }
+
+                .title {
+                    font-family: 'Caladea', sans-serif;
+                    font-weight: 600;
+                    color:rgba($black, 0.9);
+                    margin: 1rem 0;
+                }
+
+                .author {
+                    display: flex;
+                    align-items: center;
+                    gap:10px;
+                    margin: 2rem 0;
+                    position: absolute;
+                    bottom: 0;
+
+                    .profile {
+                        background-color: $pink;
+                        $size: 3rem;
+                        height: $size;
+                        width: $size;
+                        border-radius: 10px;
+                    }
+                }
+
+                .time {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 1rem;;
+                    margin: 1rem 0;
+                }
+
+                .text {
+                    width: 90%;
+                }
+            }
+        }
+    }
+    
+    .blogText {
+        border: 1px solid black;
+        margin: 0 auto;
+        width: 70%;
+    }
+}

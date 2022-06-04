@@ -1,0 +1,89 @@
+.card-list-info {
+    position: relative;
+    height: 30vh;
+}
+
+.card-design {
+    height: 28vh;
+    width: 75%;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.card1 {
+    background-color: #F1F4F9;
+    z-index: 3;
+    top: 20%;
+    left: 20%;
+}
+
+.card2 {
+    background-color: #392D38;;
+    z-index: 2;
+    top: 10%;
+    left: 8%;
+}
+
+.card3 {
+    background-color: #A12D2D;
+    z-index: 1
+}
+
+.card-num-design {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    top: 40%;
+    left: 20%;
+    justify-content: flex-end;
+}
+
+.card-dots {
+    height: 2vh;
+    margin: 0 8%;
+    color: #11101D
+}
+
+.card-number {
+    font-family: 'Poppins';
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 5% 10% 5% 0;
+    color: #11101D
+}
+
+.card-type {
+    position: absolute;
+    top: 58%;
+    left: 62%;
+    width: 30%;
+    text-align: right;
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 5% 10% 5% 0;
+    color: #11101D
+}
+
+.expiration {
+    position: absolute;
+    top: 70%;
+    left: 8%;
+}
+
+.exp-text {
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 400;
+    color: #11101D;
+    margin: 0;
+}
+
+.exp-date {
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 400;
+    color: #11101D;
+    margin: 0;
+}

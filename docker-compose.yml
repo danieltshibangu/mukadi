@@ -1,0 +1,27 @@
+version: "3.4"
+
+x-environment:
+  &QUICKSTART_ENVIRONMENT # These are read from .env file. The values in the .env file maybe overriden by shell envvars
+  PLAID_CLIENT_ID: ${PLAID_CLIENT_ID}
+  PLAID_SECRET: ${PLAID_SECRET}
+  PLAID_PRODUCTS: ${PLAID_PRODUCTS}
+  PLAID_COUNTRY_CODES: ${PLAID_COUNTRY_CODES}
+  PLAID_REDIRECT_URI: ${PLAID_REDIRECT_URI}
+  PLAID_ENV: ${PLAID_ENV}
+
+services:
+  python:
+    networks:
+      - "quickstart"
+    depends_on:
+      - "frontend"
+    build:
+      context: .
+      dockerfile: ./python/Dockerfile
+    ports: ["8000:8000"]
+    environment:
+      <<: *QUICKSTART_ENVIRONMENT
+networks:
+  quickstart:
+    name: quickstart
+

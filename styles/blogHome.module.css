@@ -1,0 +1,23 @@
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 5%;
+    height: 20%;
+}
+
+.background-top {
+    position: absolute; 
+    background-color: #fff;
+    left: 15%;
+    width: 70%;
+    top: 10%;
+    height: 70vh;
+ 
+} 
+
+.header-title {
+    font-family: 'Ubuntu';
+    font-size: 5em;
+    font-weight: 700;
+}

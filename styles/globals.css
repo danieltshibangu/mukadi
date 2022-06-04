@@ -1,9 +1,345 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Raleway:wght@100;200;300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');;
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 
 * {
-    -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box ;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul, li {
+  list-style-type: none;
+  padding-left: 0;
+  font-family: 'Poppins';
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+p {
+  font-family: 'Poppins';
+  margin: 0;
+}
+
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 0 0 9%;
+}
+
+.home-content {
+  margin-left: 7%;
+  width: 65%;
+  -webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.main-text {
+  font-family: Raleway, sans-serif;
+  font-style: medium;
+  font-weight: 500;
+  font-size: 2.5rem;
+  letter-spacing: -0.5px;
+  
+
+  color: #191D21;
+}
+
+.sub-text {
+  font-family: Poppins, sans-serif;
+  font-style: medium;
+  font-weight: 300;
+  font-size: 1.3rem;
+
+  letter-spacing: -0.5px;
+
+  color: #191D21;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 20%;;
+  height: 20vh;
+}
+
+.profile {
+  height: 8vh;
+  width: 8vh;
+  background-color: black;
+  border-radius: 100%;
+}
+
+.card-info {
+  margin-left: 9%;
+  width: 23%;
+}
+
+.card-details { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-title {
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.sidebar .nav-links li i .arrow {
+  transform: rotate(-180deg);
+}
+
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  height: 100vh;
+  width: 14%;
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+
+.sidebar.close {
+  width: 6%;
+  
+}
+
+.sidebar .logo-details {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .logo-details img {
+  font-size: 30px;
+  color: #fff;
+  height: 2rem;
+  min-width: 78px;
+  margin-left: 1rem;
+  margin-top: 5rem;
+  line-height: 50px;
+}
+
+.sidebar .logo-details .logo-name {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.sidebar.close .logo-details .logo-name {
+  transition-delay: 0s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-links {
+  height: 100%;
+  padding-top: 30px 0 150px 0;
+  overflow: auto;
+}
+
+.sidebar .nav-links {
+  overflow: visible;
+  margin-top: 20vh;
+}
+
+.sidebar .nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar .nav-links li {
+  list-style: none;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li:hover {
+  background: #1d1b31
+}
+
+.sidebar .nav-links li .icon-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between ;
+}
+
+.sidebar.close .nav-links li .icon-links {
+  display: block;
+}
+
+.sidebar .nav-links li i {
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+  color: #1d1b31;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 1rem;;
+}
+
+.sidebar .nav-links li i.arrow {
+  transition-delay: 0.3s;
+}
+
+.sidebar .nav-links li.showMenu i.arrow {
+  transform: rotate(-180deg);
+}
+
+.sidebar.close .nav-links i.arrow {
+  display: none;
+}
+
+.sidebar .nav-links li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .nav-links li a .link-name {
+  font-size: 18px;
+  font-weight: 400;
+  color: #1d1b31;
+  transition-delay: 0.1s;
+}
+
+.sidebar.close .nav-links li a .link-name {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-links li .submenu {
+  padding: 6px 6px 14px 80px;
+  margin-top: -10px;
+  background: #1d1b31;
+  display: none;
+}
+
+.sidebar .nav-links li.showMenu .submenu {
+  display: block;
+}
+
+.sidebar .nav-links li .submenu a {
+  color: #fff;
+  font-size: 15px;
+  padding: 5px 0;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all 0.3 ease;
+}
+
+.sidebar .nav-links li .submenu a:hover {
+  opacity: 1;
+}
+
+.sidebar.close .nav-links li .submenu {
+  position: absolute;
+  left: 100%;
+  top: -10px;
+  margin-top: 0;
+  padding: 10px 20px;
+  border-radius: 0 6px 6px 0;
+  transition: 0.4 ease;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+  transition: 0s;
+}
+
+.sidebar.close .nav-links li:hover .submenu {
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li .submenu .link_name {
+  display: none;
+}
+
+.sidebar.close .nav-links li .submenu .link_name {
+  font-size: 18px;
+  opacity: 1;
+  display: block;
+}
+
+.sidebar .nav-links li .submenu.blank {
+  pointer-events: auto;
+  padding: 3px 20px 6px 16px;
+  opacity: 0;
+  pointer-events: none;
+ 
+}
+
+.sidebar .nav-links li:hover .submenu.blank {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.other-sidebar {
+  position: relative;
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.3s ease;
+}
+
+.other-sidebar.covering {
+background: rgba(0,0,0,0.8);
+z-index: 50;
+color: #fff;
+}
+
+
+.sidebar.close ~ .other-sidebar {
+  left: 78px;
+  width: calc(100% - 78px);
+}
+
+.other-sidebar .adjacent-sidebar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: static;
+}
+
+.other-sidebar .adjacent-sidebar .bx-menu {
+  color: #11101D;
+  font-size: 35px;
+  margin: 0 15px;
+  cursor: pointer;
+  z-index: 100;
+  display: none;
+}
+
+.other-sidebar.covering {
+  box-shadow:0 0 0 10000px rgba(0,0,0,.8);
 }
