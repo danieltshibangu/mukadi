@@ -56,6 +56,8 @@ const index = () => {
         <Topbar />
 
         <main className={styles['main']}>
+
+          <h4 className={styles.title}>Dashboard</h4>
           
           <div className={styles['main-content']}>
             <div className={styles.general}>
@@ -210,6 +212,10 @@ const index = () => {
               </div>
             </div> */}
 
+            <div className={styles.transactions}>
+              
+            </div>
+
 
 
           {/* budget graph section */}
@@ -247,6 +253,8 @@ const index = () => {
           </div> */}
 
           </div>
+
+
           
         </main>
     </div>

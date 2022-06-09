@@ -8,35 +8,33 @@ $darkpink: #FFD7C3;
 $darkgreen:#7FD1AE;
 $backwhite: #F1F4F9;
 $backwhite: #F1F4F9;
+$topbar-height: 0;
+$sidebar-width: 7%;
 
 
 .main {
-    $topbar-height: 10vh;
-    $sidebar-width: 4%;
     //background-color: rgb(217, 240, 220, 0.7);
     background-color:  #f8f8ff;
     height: 150vh;
     margin: $topbar-height 0 0 $sidebar-width;
 
     h4 {
-        font-size: 4rem;
-        padding: 2rem 0 1rem 3rem;
+        font-size: 3rem;
+        padding: 5rem 2rem 0 3.5rem;
+        font-weight: 600;
     }
 
     .main-content {
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: [row1] 18% [row2] 15% [row3] 8% [row4] 29% [row5] auto [row6];
-        margin: 3.5rem 3.5rem 5rem 3.5rem;
-        height: 150vh;
-        padding-top: 3rem;;
+        margin: 2rem 3.5rem 5rem 3.5rem;
         gap: 1rem;
 
         .general {
             background-color: #fff;
-            grid-row: row1;
-            grid-row-end: row3;
-            border-radius: 5px;
+            border-radius: 10px;
+            width: 70%;
 
             header {
                 display: flex;
@@ -244,6 +242,17 @@ $backwhite: #F1F4F9;
                                 font-family: 'Poppins', sans-serif;
                                 font-weight: 600;
                                 font-size: 1.5rem;
+                            }
+
+                            .dot {
+                                $size: 3rem;
+                                height: $size;
+                                width: $size;
+                                background-color: $pink;
+                                border-radius: 100px;
+                                position: absolute;
+                                opacity: 0.2;
+                                left: 70%;
                             }
                         }
                     }
@@ -498,6 +507,3 @@ $backwhite: #F1F4F9;
     }
 }
 
-.transactions {
-
-}

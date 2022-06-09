@@ -8,7 +8,6 @@ const Topbar = () => {
         <div className={styles.content}>
             <div className={styles.message}>
             <h3 className={styles['main-text']}>Welcome back, Daniel</h3>
-            <p className={styles['sub-text']}>You've saved up $12,000 so far! Keep it up!</p>
             </div>
             
 

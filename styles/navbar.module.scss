@@ -1,9 +1,18 @@
 @media (min-width: 1000px) {
   
+    .navPanel {
+        margin: 0 auto;
+        padding: 3rem;
+        width: 75%;
+    }
     // Laptop/desktop CSS
    .logo {
        height: 2rem;
        margin-right: 1rem;
+   }
+
+   .logos {
+       margin-right: 5rem;
    }
 
    .navLink {
