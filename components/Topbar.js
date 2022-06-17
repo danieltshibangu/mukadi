@@ -7,7 +7,21 @@ const Topbar = () => {
     <header className={styles['header']}>
         <div className={styles.content}>
             <div className={styles.message}>
-            <h3 className={styles['main-text']}>Welcome back, Daniel</h3>
+                <InputGroup className="mb-3" style={{display: 'flex', alignItems: 'center'}}>
+                    <FormControl
+                    placeholder="Search for something here..."
+                    aria-label="Recipient's username"
+                    aria-describedby="basic-addon2"
+                    style={{ padding: '1.1rem', width: '25rem', borderRadius: '10px', border: 'none'}}
+                    />
+                    <Button variant="outline-secondary" id="button-addon2"
+                    style={{ 
+                        border: 'none', position: 'absolute', right: '2rem',
+                        backgroundColor: '#FBE6DA', borderRadius: '10px', width: '5rem', 
+                        textAlign: 'center', zIndex: 10 }}>
+                        <i class='bx bx-search'></i>
+                    </Button>
+                </InputGroup>
             </div>
             
 

@@ -8,20 +8,19 @@ $darkpink: #FFD7C3;
 $darkgreen:#7FD1AE;
 
 .header {
-    position: fixed;
+    position: relative;
     $sidebar-width: 7%;
     left: $sidebar-width; // this is the width of the sidebar
     top: 0;
     width: 100% - $sidebar-width; 
-    background: #fff;
+    background-color:  #f8f8ff;
     z-index: 20;
-    border-left: 1px solid rgb(0,0,0,0.05);
     
 
     .content {
         width: 100%;
         display: flex;
-        padding: 1.4rem;
+        padding: 3rem 2rem;
         justify-content: space-between;
         align-items: center;
 
@@ -44,6 +43,13 @@ $darkgreen:#7FD1AE;
         align-items: center;
         justify-content: space-evenly;
         width: 20%;
+        gap: 15%;
+
+        i {
+            font-size: 2rem;;
+            font-weight: 200;
+            color: rgba($black, 0.7)
+        }
 
         .profile-details {
             .profile-content {

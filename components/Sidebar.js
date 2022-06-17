@@ -15,7 +15,7 @@ function Sidebar() {
         <div className={styles.sidebar}>
             <div className={styles['logo-details']}>
                 <img src='/mukadi-logo-black.svg' />
-                <img src='/MUKADI.svg' style={{ height: '1.1rem', marginLeft: '-3rem'}} />
+                <img src='/MUKADI.svg' style={{ height: '1.1rem', marginLeft: '-1.4rem'}} />
             </div>
 
             <ul className={styles['nav-links']}>
@@ -92,10 +92,7 @@ function Sidebar() {
                 <li>
                     <div className={styles.feedback}>
                         <hr style={{ height: '1px', width: '15vw', margin: '1.2rem 0rem', opacity: 0.1}} />
-                        <div className={styles['help-section']}>
-                            <i class='bx bx-info-circle' ></i>
-                            <p>Help and getting started</p>
-                        </div>
+                        
                     </div>
                 </li>
             </ul>

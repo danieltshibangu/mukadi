@@ -7,7 +7,7 @@ import Sidebar from '../../components/Sidebar'
 import Topbar from '../../components/Topbar'
 import Transactions from '../../components/Transactions'
 import styles from '../../styles/appindex.module.scss'
-import { Button } from 'react-bootstrap'
+import { Button, Dropdown} from 'react-bootstrap'
 import Sidebar2 from '../../components/Sidebar2'
 
 const index = () => {
@@ -104,8 +104,18 @@ const index = () => {
                 
                 <div className={styles['future-data']}>
                   <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-                  <h5 className={styles['header-title']}>Future Expectations</h5>
-                  <h6>This Month</h6>
+                    <h5 className={styles['header-title']}>Future Expectations</h5>
+                    <Dropdown>
+                      <Dropdown.Toggle variant="success" id="dropdown-basic">
+                        Monthly
+                      </Dropdown.Toggle>
+
+                      <Dropdown.Menu>
+                        <Dropdown.Item href="#/action-1">Weekly</Dropdown.Item>
+                        <Dropdown.Item href="#/action-2">Monthly</Dropdown.Item>
+                        <Dropdown.Item href="#/action-3">Annually</Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
                   </div>
 
                   <div className={styles.content}>
@@ -251,6 +261,8 @@ const index = () => {
 
             </div>
           </div> */}
+
+          <div className={styles.bills}>Anime</div>
 
           </div>
 

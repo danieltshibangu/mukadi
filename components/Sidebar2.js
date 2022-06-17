@@ -111,11 +111,11 @@ export default function Sidebar2() {
                 </ul>
             </div>
 
-                <section className="other-sidebar">
+                {/* <section className="other-sidebar">
                     <div className="adjacent-sidebar">
                         <i className="bx bx-menu"></i>
                     </div>
-                </section>
+                </section> */}
         </div>
     );
 }
