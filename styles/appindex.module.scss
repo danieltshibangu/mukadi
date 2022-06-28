@@ -8,500 +8,903 @@ $darkpink: #FFD7C3;
 $darkgreen:#7FD1AE;
 $backwhite: #F1F4F9;
 $backwhite: #F1F4F9;
+$gold: #FFC700;
 $topbar-height: 0;
 $sidebar-width: 7%;
 
 
-.main {
-    //background-color: rgb(217, 240, 220, 0.7);
-    background-color:  #f8f8ff;
-    height: 150vh;
-    margin: $topbar-height 0 0 $sidebar-width;
+@media screen and (min-width: 801px) {
+    //For Laptops
+    .main {
+        //background-color: rgb(217, 240, 220, 0.7);
+        background-color:  #f8f8ff;
+        margin: $topbar-height 0 0 $sidebar-width;
+        padding: 0rem 3.5rem 5rem 3.5rem;
 
-    h4 {
-        font-size: 3rem;
-        padding: 0 2rem 2rem 3.5rem;
-        font-weight: 600;
-    }
+        .dashTitle {
+            font-size: 3rem;
+            padding: 0 2rem 2rem 0rem;
+            font-weight: 600;
+        }
 
-    .main-content {
-        display: flex;
-        flex-wrap: wrap;
-        grid-template-columns: 1fr 1fr 1fr;
-        margin: 0rem 3.5rem 5rem 3.5rem;
-        gap: 0.5rem;
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
 
-        .general {
-            background-color: #fff;
-            border-radius: 10px;
-            width: 65%;
+            .general {
+                background-color: #fff;
+                border-radius: 10px;
+                padding-bottom: 2rem;
 
-            header {
-                display: flex;
-                align-items: center;
-                margin-left: 1.5rem;;
+                header {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 1.5rem;;
 
-                .color-bar {
-                    background-color: $lightorange;
-                    height: 2rem;
-                    width: 1rem;
-                    margin: 1rem;
-                    border-radius: 4px;;
+                    .color-bar {
+                        background-color: $lightorange;
+                        height: 2rem;
+                        width: 1rem;
+                        margin: 1rem;
+                        border-radius: 4px;;
+                    }
+
+                    p {
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                    }
                 }
 
-                p {
-                    font-weight: 600;
-                    font-size: 1.2rem;
-                }
-            }
+                .overview {
+                    margin: 0.5rem 3.5rem 0rem 3.5rem;
+                    
 
-            .overview {
-                display: grid;
-                grid-template-columns: [first] 50% [line2] 50% [end];
-                grid-template-rows: [row1] 65% [row2] auto [row3] auto [row4];
-                height: 320px;
-                margin: 0.5rem 3.5rem 5rem 3.5rem;
-                
-
-                .total-earnings {
-                    background-color: $pink;
-                    grid-column-start: first;
-                    grid-column-end: end;
-                    grid-row-start: row1;
-                    grid-row-end: row2;
-                    margin: 0.5rem;
-                    border-radius: 10px;
-                    display: grid;
-                    grid-template-columns: [first] 50% [line2] 50% [end];
-                    grid-template-rows: [row1] 100% [row2];
-
-                    .earnings-content {
-                        background: #fff;
-                        margin: 0.6rem;
+                    .total-earnings {
+                        background-color: $pink;
+                        margin: 0.5rem;
                         border-radius: 10px;
-                        filter: drop-shadow(0px 3.38629px 5.64383px rgba(176, 190, 197, 0.32)); 
-                        display: flex;
-                        align-items: baseline;
-                        padding: 1rem;
-                        padding-top: 2.5rem;
+                        display: grid;
+                        grid-template-columns: [first] 50% [line2] 50% [end];
+                        grid-template-rows: [row1] 100% [row2];
 
-                        .rate {
-                            position: absolute;
-                            width: 5rem; 
-                            height: 2rem;
-                            background-color: rgb(110, 212, 124, 0.3);
-                            right: 0;
-                            top: 0;
-                            margin: 1rem;
+                        .earnings-content {
+                            background: #fff;
+                            margin: 0.6rem;
                             border-radius: 10px;
+                            filter: drop-shadow(0px 3.38629px 5.64383px rgba(176, 190, 197, 0.32)); 
                             display: flex;
-                            align-items: center;
-                            justify-content: center;
+                            align-items: baseline;
+                            padding: 1rem;
+                            padding-top: 2.5rem;
 
-                            i {
-                                color: #6ED47C;
-                                font-size: 1.3rem;
+                            .rate {
+                                position: absolute;
+                                width: 5rem; 
+                                height: 2rem;
+                                background-color: rgb(110, 212, 124, 0.3);
+                                right: 0;
+                                top: 0;
+                                margin: 1rem;
+                                border-radius: 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                i {
+                                    color: #6ED47C;
+                                    font-size: 1.3rem;
+                                }
+                                
+
+                                p {
+                                    text-align: center;
+                                    font-weight: 600;
+                                    color: #6ED47C;
+                                }
                             }
                             
+                            .backColor {
+                                height:3rem;
+                                width: 3rem;
+                                border-radius: 100px;
+                                background-color: #6ED47C; 
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-right: 1rem;
+
+                                i {
+                                    font-size: 1.5rem;
+                                }
+                            }
+
+                            .account-info {
+                                h5 {
+                                    font-size: 1rem;
+                                    font-family: 'Poppins', sans-serif;
+                                    color:rgba(0, 0, 0, 0.7);
+                                    margin: 0;
+                                }
+
+                                p {
+                                    font-family: 'Poppins', sans-serif;
+                                    font-weight: 800;
+                                    font-size: 3rem; 
+                                }
+                            }
+                        }
+
+                        .savings-content {
+                            margin: 0.6rem; 
+                            padding: 1rem;
+                            padding-top: 2.5rem;;
+                            display: flex;
+                            align-items: baseline;
+                            position: relative;
+
+                            .rate {
+                                position: absolute;
+                                width: 5rem; 
+                                height: 2rem;
+                                background-color: rgb(255, 10, 10, 0.3);
+                                right: 0;
+                                top: 0;
+                                margin: 1rem;
+                                border-radius: 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                i {
+                                    color: #ff0a0a;
+                                    opacity: 0.5;
+                                    font-size: 1.3rem;
+                                }
+                                
+
+                                p {
+                                    text-align: center;
+                                    font-weight: 600;
+                                    opacity: 0.5;
+                                    color: #ff0a0a;
+                                }
+                            }
+
+                            .backColor {
+                                height:3rem;
+                                width: 3rem;
+                                border-radius: 100px;
+                                background-color: #FF743C; 
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-right: 1rem;
+
+                                i {
+                                    font-size: 1.5rem;
+                                }
+                            }
+
+                            .account-info {
+                                h5 {
+                                    font-size: 1rem;
+                                    font-family: 'Poppins', sans-serif;
+                                    color:rgba(0, 0, 0, 0.7);
+                                    margin: 0;
+                                }
+
+                                p {
+                                    font-family: 'Poppins', sans-serif;
+                                    font-weight: 800;
+                                    font-size: 3rem; 
+                                }
+                            }
+                        }
+                    }
+
+                    .future-data {
+                        grid-column-start: first;
+                        grid-column-end: end;
+                        grid-row-start: row2;
+                        grid-row-end: row3;
+                        margin-top: 2rem;
+
+                        .header-title {
+                            font-size: 2rem;
+                            font-weight: 700;
+                        }
+
+                        .content {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .exp-data {
+                                padding: 1.4rem 1.8em;
+                                position: relative;
+                                z-index: 1;
+
+                                .title {
+                                    font-size: 0.9rem;
+                                    white-space: nowrap;
+                                }
+
+                                .amount {
+                                    font-family: 'Poppins', sans-serif;
+                                    font-weight: 600;
+                                    font-size: 1.5rem;
+                                }
+
+                                .dot {
+                                    $size: 3rem;
+                                    height: $size;
+                                    width: $size;
+                                    background-color: $pink;
+                                    border-radius: 100px;
+                                    position: absolute;
+                                    opacity: 0.2;
+                                    left: 70%;
+                                }
+                            }
+                        }
+                    }
+
+                    .graphData {
+                        height: 20rem;
+                    }
+                }
+
+                
+            }
+
+            // .credit {
+            //     background-color: #fff;
+            //     grid-column-start: line2;
+            //     grid-column-end: end;
+            //     border-radius: 5px;
+            //     grid-row-start: row1;
+            //     grid-row-end: row2;
+            //     position: relative;
+
+            //     .credit-content {
+            //         padding: 1.3rem;
+
+            //         header {
+            //             display: flex;
+            //             align-items: center;
+
+            //             .color-bar {
+            //                 background-color: $lightorange;
+            //                 height: 2rem;
+            //                 width: 1rem;
+            //                 margin: 0 0.5rem;
+            //                 border-radius: 4px;
+            //             }
+
+            //             p {
+            //                 font-weight: 600;
+            //                 font-size: 1.2rem;
+            //             }
+            //         }
+
+            //         .credit-info {
+            //             padding: 1rem;;
+
+            //             .score {
+            //                 position: relative;
+            //                 width: 45%;
+
+            //                 .dot {
+            //                     background-color: #7FD1AE;
+            //                     $size: 7rem;
+            //                     height: $size;
+            //                     width: $size;
+            //                     border-radius: 100px;
+            //                     position: absolute;
+            //                     z-index: 0;
+            //                     opacity: 0.2;
+            //                     left: 0;
+            //                     top: 0px;
+            //                 }
+
+            //                 .credit-score {
+            //                     position: relative;
+            //                     font-size: 4rem;
+            //                     font-weight: 700;
+            //                     font-family: 'Poppins', sans-serif;
+            //                     text-align: right;
+            //                     padding-right: 1.4rem;
+            //                 }
+
+            //                 .rate {
+            //                     background: $green;
+            //                     width: 6rem;
+            //                     padding: 0.3rem;
+            //                     border-radius: 20px;
+            //                     text-align: center;
+            //                     position: absolute;
+            //                     right: 1rem;
+            //                     bottom: -1.5rem;
+            //                 }
+
+            //                 .points {
+            //                     font-size: .8rem;
+            //                     font-weight: 700;
+            //                     color: #6ED47C
+            //                 }
+            //             }
+                        
+                    
+            //         }
+
+            //         .credit-data-table {
+            //             height: 80%; 
+            //             width: 50%;
+            //             position: absolute;
+            //             right: 0;
+            //             top: 1.5rem;
+
+            //             .credit-title {
+            //                 font-family: 'Nunito Sans', sans-serif;
+            //                 font-size: 1rem;
+            //                 color:rgba(0, 0, 0, 0.6);
+            //                 font-weight: 400;
+            //             }
+
+            //             .format {
+                            
+            //                 width: 50%;
+            //                 border-radius: 20px;
+            //                 display: flex;
+            //                 align-items: center;
+
+            //                 .line {
+            //                     height: 2vh;
+            //                     background-color: #BDD6F5;
+            //                     width: 5%;
+            //                 }
+
+            //                 .issuer {
+            //                     padding: 0.4rem;
+            //                     font-size: .9rem;
+            //                     text-align: center;
+            //                 }
+            //             }
+
+            //             .dueDate {
+            //                 font-family: 'Shippori Mincho', sans-serif;
+            //                 font-weight: 800;
+            //                 font-size: 1.2rem;
+            //             }
+
+            //             .cardUtil {
+
+            //                 .utilRate {
+            //                     font-family: 'Shippori Mincho', sans-serif;
+            //                     font-weight: 800;
+            //                     font-size: 1.6rem;
+            //                     color: $lightorange;
+            //                 }
+
+            //                 .update {
+            //                     font-size: 0.8rem;
+            //                 }
+            //             }
+
+                        
+            //         }
+            //     }
+            // }
+
+            // .extra-credit {
+                
+            //     grid-column-start: line2;
+            //     grid-column-end: end;
+            //     grid-row-start: row2;
+            //     grid-row-end: row4;
+            //     border-radius: 5px;
+
+            //     .content {
+            //         padding: 1.3rem;
+                    
+            //         .total-amount {
+
+            //             .limit {
+            //                 font-family: 'Shippori Mincho', sans-serif;
+            //                 font-size: 2.5rem;
+            //                 font-weight: 700;
+            //             }
+
+            //             .due {
+            //                 font-family: 'Shippori Mincho', sans-serif;
+            //                 font-size: 2.5rem;
+            //                 font-weight: 700;
+            //             }
+
+            //             .credit-title {
+            //                 font-family: 'Nunito Sans', sans-serif;
+            //                 font-size: 1rem;
+            //                 color:rgba(0, 0, 0, 0.6);
+            //                 font-weight: 400;
+            //             }
+
+                        
+            //         }
+
+            //         .progress {
+            //             width: 100%;
+            //             max-width: 100%;
+            //             height: 9px;
+            //             background: #e1e4e8;
+            //             border-radius: 3px;
+            //             overflow: hidden;
+            //             margin: 1rem 0;
+        
+            //             .progress-bar {
+            //                 display: block;
+            //                 height: 100%;
+            //                 background: linear-gradient(90deg,#ffd33d,#ea4aaa 17%,#b34bff 34%,#01feff 51%,#ffd33d 68%,#ea4aaa 85%,#b34bff);
+            //                 background-size: 300% 100%;
+            //                 animation: progress-animation 2s linear infinite;
+        
+            //                 @keyframes progress-animation {
+            //                 0% {background-position: 100%}
+            //                 100% {background-position: 0}
+            //                 }
+            //             }
+            //         }  
+            //     }
+            // }
+
+            
+
+            .bills {
+                background-color: #fff;
+                border-radius: 10px;
+                padding-bottom: 1.7rem;;
+                padding-right: 2rem;
+                
+
+                header {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 1.5rem;
+
+                    .color-bar {
+                        background-color: $darkgreen;
+                        height: 2rem;
+                        width: 1rem;
+                        margin: 1rem;
+                        border-radius: 4px;
+                    }
+
+                    .title {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+                }
+
+                .content {
+                    padding: 0rem 0rem 0rem 4rem;
+                    
+
+                    table td {
+                        padding: 1.5rem;
+                    }
+
+                    .rent {
+                        .upper-detail-format {
+                            display: flex;
+                            justify-content: space-between;
+                            gap: 2rem;
+
+                            h5 {
+                                font-size: 1rem;;
+                            }
 
                             p {
-                                text-align: center;
-                                font-weight: 600;
-                                color: #6ED47C;
+                                font-size: 1.7rem;
+                                font-family: 'Poppins';
+                                font-weight: 500;
+                                letter-spacing: -1px;
                             }
                         }
                         
-                        .backColor {
-                            height:3rem;
-                            width: 3rem;
+                        .billModel {
+                            background-color: $green;
                             border-radius: 100px;
-                            background-color: #6ED47C; 
+                            $size: 2.5rem;
+                            height: $size;
+                            width: $size;
                             display: flex;
-                            justify-content: center;
                             align-items: center;
-                            margin-right: 1rem;
+                            justify-content: center;
 
                             i {
-                                font-size: 1.5rem;
+                                font-size: 1.6rem;
+                                color: $darkgreen;
                             }
                         }
 
-                        .account-info {
-                            h5 {
-                                font-size: 1rem;
-                                font-family: 'Poppins', sans-serif;
-                                color:rgba(0, 0, 0, 0.7);
-                                margin: 0;
+                        .last-payment-comparison {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.7rem;
+
+                            i {
+                                font-size: 2rem;
+                                color: $gold;
                             }
 
-                            p {
-                                font-family: 'Poppins', sans-serif;
-                                font-weight: 800;
-                                font-size: 3rem; 
+                            em {
+                                color: $gold;
+                                font-size: 0.9rem;
+                            }
+
+                            span {
+                                text-transform: uppercase;
+                                color:rgba(0, 0, 0, 0.5);
+                                font-size: 0.9rem;
                             }
                         }
                     }
 
-                    .savings-content {
-                        margin: 0.6rem; 
-                        padding: 1rem;
-                        padding-top: 2.5rem;;
-                        display: flex;
-                        align-items: baseline;
-                        position: relative;
-
-                        .rate {
-                            position: absolute;
-                            width: 5rem; 
-                            height: 2rem;
-                            background-color: rgb(255, 10, 10, 0.3);
-                            right: 0;
-                            top: 0;
-                            margin: 1rem;
-                            border-radius: 10px;
+                    .percentage-income {
+                        .upper-detail-format {
                             display: flex;
-                            align-items: center;
-                            justify-content: center;
+                            justify-content: space-between;
+                            gap: 4rem;
 
-                            i {
-                                color: #ff0a0a;
-                                opacity: 0.5;
-                                font-size: 1.3rem;
-                            }
-                            
-
-                            p {
-                                text-align: center;
-                                font-weight: 600;
-                                opacity: 0.5;
-                                color: #ff0a0a;
-                            }
-                        }
-
-                        .backColor {
-                            height:3rem;
-                            width: 3rem;
-                            border-radius: 100px;
-                            background-color: #FF743C; 
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            margin-right: 1rem;
-
-                            i {
-                                font-size: 1.5rem;
-                            }
-                        }
-
-                        .account-info {
                             h5 {
-                                font-size: 1rem;
-                                font-family: 'Poppins', sans-serif;
-                                color:rgba(0, 0, 0, 0.7);
-                                margin: 0;
+                                font-size: 1rem;;
                             }
 
                             p {
-                                font-family: 'Poppins', sans-serif;
-                                font-weight: 800;
-                                font-size: 3rem; 
+                                font-size: 1.7rem;
+                                font-family: 'Poppins';
+                                font-weight: 500;
+                                letter-spacing: -1px;
                             }
                         }
+                        
+                        .billModel {
+                            background-color: $green;
+                            border-radius: 100px;
+                            $size: 2.5rem;
+                            height: $size;
+                            width: $size;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            i {
+                                font-size: 1.6rem;
+                                color: $darkgreen;
+                            }
+                        }
+
+                        .last-payment-comparison {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.7rem;
+
+                            i {
+                                font-size: 2rem;
+                                color: $gold;
+                            }
+
+                            em {
+                                color: $gold;
+                                font-size: 0.9rem;
+                            }
+
+                            span {
+                                text-transform: uppercase;
+                                color:rgba(0, 0, 0, 0.5);
+                                font-size: 0.9rem;
+                            }
+                        }
+                    }
+
+                    
+                }
+
+            }
+
+            .budgetGraph {
+                background-color: #fff;
+                border-radius: 10px;
+                padding: 1rem;
+                margin-top: 1rem;
+
+                .graph {
+                    width: 100%;
+                }
+
+                header {
+                    display: flex;
+                    align-items: center;
+                    margin: 1.5rem;
+
+                    .color-bar {
+                        background-color: $green;
+                        height: 2rem;
+                        width: 1rem;
+                        margin: 0 1rem 0 0;
+                        border-radius: 4px;
+                    }
+
+                    .title {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+                }
+                
+            }
+
+            .savingsPredictions {
+                border-radius: 10px;
+                background-color: #fff;
+                padding: 0 1.5rem;
+
+                .header-title {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    margin: 1.5rem 2rem;
+                }
+
+                .expense-history {
+                    display: flex;
+                    align-items: center;
+                    justify-content:space-between;
+                    width: 40rem;
+                    margin-bottom: 2rem;
+
+                    i {
+                        margin-left: 2rem;;
+                        font-size: 1.5rem;;
+                    }
+
+                    .item-title {
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                    }
+
+                    .date {
+                        color:rgba(0, 0, 0, 0.5);
+                        font-size: 0.8rem;
+                    }
+
+                    .type {
+                        position: relative;
+                        
+                        p {
+                            color:rgba(0, 0, 0, 0.7);
+
+                        }
+
+                        .dot {
+                            border-radius: 100px;
+                            $size: 3rem;
+                            height: $size;
+                            width: $size;
+                            background-color: #7FD1AE;
+                            position: absolute;
+                            opacity: 0.1;
+                            top: -0.7rem;
+                            left: -1rem;
+                        }
+                    }
+
+                    .price {
+                        font-weight: 700;
+                        font-size: 1.7rem;
+                    }
+
+                    
+
+
+
+                }
+
+                header {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 1rem;;
+
+                    .color-bar {
+                        background-color: $lightorange;
+                        height: 2rem;
+                        width: 1rem;
+                        margin: 1rem;
+                        border-radius: 4px;;
+                    }
+
+                    p {
+                        font-weight: 600;
+                        font-size: 1.2rem;
                     }
                 }
 
-                .future-data {
-                    grid-column-start: first;
-                    grid-column-end: end;
-                    grid-row-start: row2;
-                    grid-row-end: row3;
-                    margin-top: 2rem;
+                .moreInfo {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    gap: 1rem;
+                    background-color: $pink;
+                    padding: 1rem;
+                    border-radius: 10px;
+
+                    .savingsInfo {
+                        background-color: #fff;
+                        filter: drop-shadow(0px 3.38629px 5.64383px rgba(176, 190, 197, 0.32)); 
+                        $size: 12rem;
+                        height: 9rem;
+                        width: $size;
+                        border-radius: 10px;
+                        padding: 1rem;
+                        position: relative;
+
+                        .title {
+                            
+                            font-size: 0.9rem;
+                            color: rgba(0, 0, 0, 0.5);
+                        }
+
+                        .amount {
+                            position: absolute;
+                            bottom: 1rem;
+                            font-size: 1.6rem;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+
+            .savingsAccounts {
+                background-color: $pink;
+                border-radius: 10px;;
+                
+                .account1 {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    gap: 2rem;
+                    padding: 1.2rem; 
+                    margin: 1rem 0;
+                    
+                    .icon {
+                        i {
+                            font-size: 1.2rem;
+                            color: $darkorange;
+                            background-color: $pink;
+                            padding: 0.6rem;
+                            border-radius: 100px;
+                        }
+                    }
+
+                    
+
+                    .amount {
+                        font-weight: 600;
+                        font-size: 1.7rem;
+                    }
+
+                    .title {
+                        font-size: 0.8rem;
+                        color: rgba(0, 0, 0, 0.7);
+                        font-weight: 300;
+                    }
+
+                }
+
+
+            }
+
+            .transactions {
+                background-color: #fff;
+                border-radius: 10px;
+                padding: 1rem;
+
+                header {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 1.5rem;;
+
+                    .color-bar {
+                        background-color: $lightorange;
+                        height: 2rem;
+                        width: 1rem;
+                        margin: 1rem;
+                        border-radius: 4px;;
+                    }
+
+                    p {
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .content {
+                    padding: 2rem;
+                    display: flex;
+                    gap: 2rem;
+                    align-items: flex-start;
 
                     .header-title {
                         font-size: 2rem;
                         font-weight: 700;
+                        margin: 1.5rem 0;
                     }
 
-                    .content {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 0.5rem;
+                
 
-                        .exp-data {
-                            padding: 1.4rem 1.8em;
-                            position: relative;
-                            z-index: 1;
-
-                            .title {
-                                font-size: 0.9rem;
-                                white-space: nowrap;
-                            }
-
-                            .amount {
-                                font-family: 'Poppins', sans-serif;
-                                font-weight: 600;
-                                font-size: 1.5rem;
-                            }
-
-                            .dot {
-                                $size: 3rem;
-                                height: $size;
-                                width: $size;
-                                background-color: $pink;
-                                border-radius: 100px;
-                                position: absolute;
-                                opacity: 0.2;
-                                left: 70%;
-                            }
+                    .expenseMonthly {
+                        
+                        td {
+                            padding: 1rem;
                         }
                     }
-                }
-            }
 
-            
-        }
+                    .title {
+                        font-size: 0.9rem;
+                        color:rgba(0, 0, 0, 0.5);
+                    }
 
-        .transactions {
-            background-color: #fff;
-            grid-row: row1;
-            grid-row-end: row4;
-            border-radius: 5px;
+                    .amount {
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                    }
 
-            .transaction-content {
-                
-            }
-        }
-
-        // .credit {
-        //     background-color: #fff;
-        //     grid-column-start: line2;
-        //     grid-column-end: end;
-        //     border-radius: 5px;
-        //     grid-row-start: row1;
-        //     grid-row-end: row2;
-        //     position: relative;
-
-        //     .credit-content {
-        //         padding: 1.3rem;
-
-        //         header {
-        //             display: flex;
-        //             align-items: center;
-
-        //             .color-bar {
-        //                 background-color: $lightorange;
-        //                 height: 2rem;
-        //                 width: 1rem;
-        //                 margin: 0 0.5rem;
-        //                 border-radius: 4px;
-        //             }
-
-        //             p {
-        //                 font-weight: 600;
-        //                 font-size: 1.2rem;
-        //             }
-        //         }
-
-        //         .credit-info {
-        //             padding: 1rem;;
-
-        //             .score {
-        //                 position: relative;
-        //                 width: 45%;
-
-        //                 .dot {
-        //                     background-color: #7FD1AE;
-        //                     $size: 7rem;
-        //                     height: $size;
-        //                     width: $size;
-        //                     border-radius: 100px;
-        //                     position: absolute;
-        //                     z-index: 0;
-        //                     opacity: 0.2;
-        //                     left: 0;
-        //                     top: 0px;
-        //                 }
-
-        //                 .credit-score {
-        //                     position: relative;
-        //                     font-size: 4rem;
-        //                     font-weight: 700;
-        //                     font-family: 'Poppins', sans-serif;
-        //                     text-align: right;
-        //                     padding-right: 1.4rem;
-        //                 }
-
-        //                 .rate {
-        //                     background: $green;
-        //                     width: 6rem;
-        //                     padding: 0.3rem;
-        //                     border-radius: 20px;
-        //                     text-align: center;
-        //                     position: absolute;
-        //                     right: 1rem;
-        //                     bottom: -1.5rem;
-        //                 }
-
-        //                 .points {
-        //                     font-size: .8rem;
-        //                     font-weight: 700;
-        //                     color: #6ED47C
-        //                 }
-        //             }
-                    
-                
-        //         }
-
-        //         .credit-data-table {
-        //             height: 80%; 
-        //             width: 50%;
-        //             position: absolute;
-        //             right: 0;
-        //             top: 1.5rem;
-
-        //             .credit-title {
-        //                 font-family: 'Nunito Sans', sans-serif;
-        //                 font-size: 1rem;
-        //                 color:rgba(0, 0, 0, 0.6);
-        //                 font-weight: 400;
-        //             }
-
-        //             .format {
-                        
-        //                 width: 50%;
-        //                 border-radius: 20px;
-        //                 display: flex;
-        //                 align-items: center;
-
-        //                 .line {
-        //                     height: 2vh;
-        //                     background-color: #BDD6F5;
-        //                     width: 5%;
-        //                 }
-
-        //                 .issuer {
-        //                     padding: 0.4rem;
-        //                     font-size: .9rem;
-        //                     text-align: center;
-        //                 }
-        //             }
-
-        //             .dueDate {
-        //                 font-family: 'Shippori Mincho', sans-serif;
-        //                 font-weight: 800;
-        //                 font-size: 1.2rem;
-        //             }
-
-        //             .cardUtil {
-
-        //                 .utilRate {
-        //                     font-family: 'Shippori Mincho', sans-serif;
-        //                     font-weight: 800;
-        //                     font-size: 1.6rem;
-        //                     color: $lightorange;
-        //                 }
-
-        //                 .update {
-        //                     font-size: 0.8rem;
-        //                 }
-        //             }
-
-                    
-        //         }
-        //     }
-        // }
-
-        // .extra-credit {
-            
-        //     grid-column-start: line2;
-        //     grid-column-end: end;
-        //     grid-row-start: row2;
-        //     grid-row-end: row4;
-        //     border-radius: 5px;
-
-        //     .content {
-        //         padding: 1.3rem;
-                
-        //         .total-amount {
-
-        //             .limit {
-        //                 font-family: 'Shippori Mincho', sans-serif;
-        //                 font-size: 2.5rem;
-        //                 font-weight: 700;
-        //             }
-
-        //             .due {
-        //                 font-family: 'Shippori Mincho', sans-serif;
-        //                 font-size: 2.5rem;
-        //                 font-weight: 700;
-        //             }
-
-        //             .credit-title {
-        //                 font-family: 'Nunito Sans', sans-serif;
-        //                 font-size: 1rem;
-        //                 color:rgba(0, 0, 0, 0.6);
-        //                 font-weight: 400;
-        //             }
-
-                    
-        //         }
-
-        //         .progress {
-        //             width: 100%;
-        //             max-width: 100%;
-        //             height: 9px;
-        //             background: #e1e4e8;
-        //             border-radius: 3px;
-        //             overflow: hidden;
-        //             margin: 1rem 0;
-    
-        //             .progress-bar {
-        //                 display: block;
-        //                 height: 100%;
-        //                 background: linear-gradient(90deg,#ffd33d,#ea4aaa 17%,#b34bff 34%,#01feff 51%,#ffd33d 68%,#ea4aaa 85%,#b34bff);
-        //                 background-size: 300% 100%;
-        //                 animation: progress-animation 2s linear infinite;
-    
-        //                 @keyframes progress-animation {
-        //                 0% {background-position: 100%}
-        //                 100% {background-position: 0}
-        //                 }
-        //             }
-        //         }  
-        //     }
-        // }
-
-        .budgetGraph {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 1.3rem;
-
-            .graph {
-                width: 100%;
-                height: 30vh;
-            }
-
-            header {
-                display: flex;
-                align-items: center;
-                margin: 1.3rem;
-
-                .color-bar {
-                    background-color: $lightorange;
-                    height: 2rem;
-                    width: 1rem;
-                    margin: 0 1rem 0 0;
-                    border-radius: 4px;
+                    .rate {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $pink;
+                        border-radius: 5px;
+                        padding: 0.4rem;
+                        width: 4rem;
+                        font-size: 0.9rem;
+                    }
                 }
 
-                .title {
-                    font-size: 1.2rem;
-                    font-weight: 600;
-                }
             }
-            
         }
     }
 }
 
+@media screen and (min-width: 600px) {
+    //For Tablets
+        .container {
+            width: 100;
+        }
+    }
+    
+   
+.risks {
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 0 1.5rem;
+    width: 54rem;
+
+
+    header {
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;;
+
+        .color-bar {
+            background-color: $lightorange;
+            height: 2rem;
+            width: 1rem;
+            margin: 1rem;
+            border-radius: 4px;;
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+    }
+}

@@ -9,6 +9,13 @@ import Transactions from '../../components/Transactions'
 import styles from '../../styles/appindex.module.scss'
 import { Button, Dropdown} from 'react-bootstrap'
 import Sidebar2 from '../../components/Sidebar2'
+import ExpenseIncomeOverview from '../../charts/ExpenseIncomeOverview'
+import indexGraph from '../../charts/IndexGraph'
+import data from '../../charts/ExpenseIncomeData'
+import IndexGraph from '../../charts/IndexGraph'
+import SavingsDoughnut from '../../charts/SavingsDoughnut'
+import PolarSavingsChart from '../../charts/PolarSavingsChart'
+import ExpenseComparison from '../../charts/ExpenseComparison'
 
 const index = () => {
 
@@ -57,7 +64,7 @@ const index = () => {
 
         <main className={styles['main']}>
 
-          <h4 className={styles.title}>Dashboard</h4>
+          <h4 className={styles.dashTitle}>Dashboard</h4>
           
           <div className={styles['main-content']}>
             <div className={styles.general}>
@@ -119,7 +126,7 @@ const index = () => {
                   </div>
 
                   <div className={styles.content}>
-                    <div className={styles['exp-data']}>
+                    <div className={styles['exp-data']} style={{ paddingLeft: 0}}>
                       <div className={styles.dot}></div>
                       <p className={styles.title}>Expected income</p>
                       <p className={styles.amount}>$2,145.98</p>
@@ -144,13 +151,17 @@ const index = () => {
                     </div>
                   </div>
                 </div>
+
+                <div className={styles.graphData}>
+                  <ExpenseIncomeOverview data={data} />
+                </div>
               </div>
             </div>
 
-            <div className={styles.transactions}>
+            {/* <div className={styles.transactions}>
               <div className={styles['transaction-content']}>
               </div>
-            </div>
+            </div> */}
 
 
             {/* <div className={styles.credit}>
@@ -222,23 +233,103 @@ const index = () => {
               </div>
             </div> */}
 
-            <div className={styles.transactions}>
-              
-            </div>
-
-
-
-          {/* budget graph section */}
-          <div className={styles.budgetGraph}>
+          <div className={styles.savingsPredictions}>
             <header>
               <div className={styles['color-bar']}></div>
-              <p className={styles.title}>Your Budgets</p>
+              <p>Savings Insights</p>
             </header>
 
-            <div className={styles.graph}>
-              <BudgetBarGraphOverview  />
+          <div className={styles.moreInfo}>
+            <div className={styles.savingsInfo}>
+              <p className={styles.title}>Deposit Total This Month</p>
+              <p className={styles.amount}>$510.00</p>
+            </div>
+            <div className={styles.savingsInfo}>
+              <p className={styles.title}>Expected Growth This Year</p>
+              <p className={styles.amount}>+$3,219.87</p>
+            </div>
+            <div className={styles.savingsInfo}>
+              <p className={styles.title}>Most Recent Deposit</p>
+              <p className={styles.amount}>$220.00</p>
             </div>
           </div>
+
+            <div style={{ display: 'flex', gap: '3rem', margin: '2rem', alignItems:'center'}}>
+             <div><PolarSavingsChart /></div>
+
+             <div className={styles.savingsAccounts}>
+
+              <div className={styles.account1}>
+                <div className={styles.icon}>
+                  <i class='bx bxs-book-add' ></i>
+                </div>
+
+                <div>
+                  <p className={styles.title}>Emergency Account (GAN)</p>
+                  <p className={styles.amount}>$22K.45</p>
+                
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <i class='bx bx-right-top-arrow-circle'
+                      style={{ fontSize: '1.2rem'}}></i>
+                    <p className={styles.rate}>+12.5%</p>
+                    <p className={styles.deposit}>($220)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.account1}>
+                <div className={styles.icon}>
+                  <i class='bx bxs-book-add' ></i>
+                </div>
+
+                <div>
+                  <p className={styles.title}>Emergency Account (GAN)</p>
+                  <p className={styles.amount}>$22K.45</p>
+                
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <i class='bx bx-right-top-arrow-circle'
+                      style={{ fontSize: '1.2rem'}}></i>
+                    <p className={styles.rate}>+12.5%</p>
+                    <p className={styles.deposit}>($220)</p>
+                  </div>
+                </div>
+              </div>
+
+              
+                
+        
+
+            </div>
+            
+          </div>
+          <h5 className={styles['header-title']}>Expense History</h5>  
+
+          <div>
+            <div className={styles['expense-history']}>
+           
+              <div style={{ display: 'flex', alignItems: 'center', gap: '2rem'}}>
+                <i class='bx bxs-book-add' ></i>
+                <div>
+                  <p className={styles['item-title']}>Pak Transfer</p>
+                  <p className={styles.date}>10 Sep,2020 at 3:30 PM</p>
+                </div>
+                
+              </div>
+
+              <div className={styles.type}>
+                <p>Marketing</p>
+                <div className={styles.dot}></div>
+              </div>
+
+              <p className={styles.price}>$2,432.00</p>
+              
+            </div>
+          </div>
+          </div> 
+
+
+
+          
 
 
           {/* recent transactions section */}
@@ -262,11 +353,196 @@ const index = () => {
             </div>
           </div> */}
 
-          <div className={styles.bills}>Anime</div>
+          <div className={styles.sideCol}>
+            <div className={styles.bills}>
+              <div className={styles.frame}>
+                <header>
+                  <div className={styles['color-bar']}></div>
+                  <p className={styles.title}>Upcoming Bills</p>
+                </header>
+
+                <div className={styles.content}>
+
+                  <table>
+                    <tr style={{ borderBottom: '1px solid rgba(0, 0, 0, 0.1)'}}>
+                      <td style={{ borderRight: '1px solid rgba(0, 0, 0, 0.1)'}}>
+                        <div className={styles.rent}>
+                          <div className={styles['upper-detail-format']}>
+                            <div className={styles.detail}>
+                              <h5>Housing (Rent/Mortgage)</h5>
+                              <p>$500.00</p>
+                            </div>
+
+                            <div className={styles.billModel}>
+                              <i class='bx bx-building-house' ></i>
+                            </div>
+                          </div>
+
+                          <p className={styles['last-payment-comparison']}>
+                            <i class='bx bx-pulse'></i>
+                            <em>0%</em>
+                            <span> vs payment last month</span>
+                          </p>
+                        </div>
+                      </td>
+
+
+                      <td>
+                        <div className={styles.rent}>
+                          <div className={styles['upper-detail-format']}>
+                            <div className={styles.detail}>
+                              <h5>Netflix Subscription</h5>
+                              <p>$12.81</p>
+                            </div>
+
+                            <div className={styles.billModel}>
+                              <i class='bx bx-building-house' ></i>
+                            </div>
+                          </div>
+
+                          <p className={styles['last-payment-comparison']}>
+                            <i class='bx bx-pulse'></i>
+                            <em>0%</em>
+                            <span> vs payment last month</span>
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style={{ borderRight: '1px solid rgba(0, 0, 0, 0.1)'}}>
+                        <div className={styles['percentage-income']}>
+                          <div className={styles['upper-detail-format']}>
+                            <div className={styles.detail}>
+                              <h5>Percent of Income</h5>
+                              <p>28.2%</p>
+                            </div>
+
+                            <div className={styles.billModel}>
+                              <i class='bx bx-building-house' ></i>
+                            </div>
+                          </div>
+
+                          <p className={styles['last-payment-comparison']}>
+                            <i class='bx bx-pulse'></i>
+                            <em>8%</em>
+                            <span> vs payment last month</span>
+                          </p>
+                        </div>
+                      </td>
+
+
+                      <td>
+                        <div className={styles.rent}>
+                          <div className={styles['upper-detail-format']}>
+                            <div className={styles.detail}>
+                              <h5>Groceries and Food</h5>
+                              <p>$380.00</p>
+                            </div>
+
+                            <div className={styles.billModel}>
+                              <i class='bx bx-building-house' ></i>
+                            </div>
+                          </div>
+
+                          <p className={styles['last-payment-comparison']}>
+                            <i class='bx bx-pulse'></i>
+                            <em>0%</em>
+                            <span> vs payment last month</span>
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  
+
+  
+
+
+                </div>
+              </div>
+            </div>
+
+            {/* budget graph section */}
+            {/* <div className={styles.budgetGraph}>
+              <header>
+                <div className={styles['color-bar']}></div>
+                <p className={styles.title}>Your Budgets</p>
+              </header>
+
+              <div className={styles.graph}>
+                <BudgetBarGraphOverview  />
+              </div>
+            </div> */}
+          </div>
+
+          
+            
+
+
+          {/* <div className={styles.transactions}>
+            <header>
+              <div className={styles['color-bar']}></div>
+              <p>Expense Insights</p>
+            </header>
+
+            <div className={styles.content}>
+
+              <div>
+
+              <div style={{ height: '20vh'}}><ExpenseComparison style={{ height: '20vh'}} /></div>
+              <h5 className={styles['header-title']}>Expense History</h5>
+
+              <div className={styles.expenseGroup}>
+                <table className={styles.expenseMonthly}>
+                  <tr>
+                    <td style={{borderRight: '1px solid black'}}>
+                      <p>$14,491</p>
+                      <p>Housing</p>
+                    </td>
+                    <td>
+                      <p>$341</p>
+                      <p>Food</p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td style={{borderRight: '1px solid black'}}>
+                      <p>$14,491</p>
+                      <p>Housing</p>
+                    </td>
+                    <td>
+                      <p>$341</p>
+                      <p>Food</p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+            
+
+              <div>
+                <div style={{ width: '13rem' }}><SavingsDoughnut /></div>
+              </div>
+
+              
+            </div>
+
+
+          </div>  */}
+
+
+          <div className={styles.risks}>
+            <header>
+              <div className={styles['color-bar']}></div>
+              <p className={styles.title}>Risk Analysis</p>
+            </header>
+          </div>
 
           </div>
 
-
+          
           
         </main>
     </div>
