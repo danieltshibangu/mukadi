@@ -1,0 +1,239 @@
+$black : #191D21;
+$white: #F5F0F6;
+$green: #D9F0DC;
+$pink: #FBE6DA;
+$darkorange: #FF743C;
+$lightorange: #FF896D;
+$darkpink: #FFD7C3;
+$darkgreen:#7FD1AE;
+$backwhite: #F1F4F9;
+$backwhite: #F1F4F9;
+$gold: #FFC700;
+$topbar-height: 0;
+$sidebar-width: 7%;
+
+.general {
+    background-color: #fff;
+    border-radius: 10px;
+    padding-bottom: 2rem;
+
+    header {
+        display: flex;
+        align-items: center;
+        margin-left: 1.5rem;;
+
+        .color-bar {
+            background-color: $lightorange;
+            height: 2rem;
+            width: 1rem;
+            margin: 1rem;
+            border-radius: 4px;;
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+    }
+
+    .overview {
+        margin: 0.5rem 3.5rem 0rem 3.5rem;
+        
+
+        .total-earnings {
+            background-color: $pink;
+            margin: 0.5rem;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: [first] 50% [line2] 50% [end];
+            grid-template-rows: [row1] 100% [row2];
+
+            .earnings-content {
+                background: #fff;
+                margin: 0.6rem;
+                border-radius: 10px;
+                filter: drop-shadow(0px 3.38629px 5.64383px rgba(176, 190, 197, 0.32)); 
+                display: flex;
+                align-items: baseline;
+                padding: 1rem;
+                padding-top: 2.5rem;
+
+                .rate {
+                    position: absolute;
+                    width: 5rem; 
+                    height: 2rem;
+                    background-color: rgb(110, 212, 124, 0.3);
+                    right: 0;
+                    top: 0;
+                    margin: 1rem;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        color: #6ED47C;
+                        font-size: 1.3rem;
+                    }
+                    
+
+                    p {
+                        text-align: center;
+                        font-weight: 600;
+                        color: #6ED47C;
+                    }
+                }
+                
+                .backColor {
+                    height:3rem;
+                    width: 3rem;
+                    border-radius: 100px;
+                    background-color: #6ED47C; 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 1rem;
+
+                    i {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .account-info {
+                    h5 {
+                        font-size: 1rem;
+                        font-family: 'Poppins', sans-serif;
+                        color:rgba(0, 0, 0, 0.7);
+                        margin: 0;
+                    }
+
+                    p {
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 800;
+                        font-size: 3rem; 
+                    }
+                }
+            }
+
+            .savings-content {
+                margin: 0.6rem; 
+                padding: 1rem;
+                padding-top: 2.5rem;;
+                display: flex;
+                align-items: baseline;
+                position: relative;
+
+                .rate {
+                    position: absolute;
+                    width: 5rem; 
+                    height: 2rem;
+                    background-color: rgb(255, 10, 10, 0.3);
+                    right: 0;
+                    top: 0;
+                    margin: 1rem;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        color: #ff0a0a;
+                        opacity: 0.5;
+                        font-size: 1.3rem;
+                    }
+                    
+
+                    p {
+                        text-align: center;
+                        font-weight: 600;
+                        opacity: 0.5;
+                        color: #ff0a0a;
+                    }
+                }
+
+                .backColor {
+                    height:3rem;
+                    width: 3rem;
+                    border-radius: 100px;
+                    background-color: #FF743C; 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 1rem;
+
+                    i {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .account-info {
+                    h5 {
+                        font-size: 1rem;
+                        font-family: 'Poppins', sans-serif;
+                        color:rgba(0, 0, 0, 0.7);
+                        margin: 0;
+                    }
+
+                    p {
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 800;
+                        font-size: 3rem; 
+                    }
+                }
+            }
+        }
+
+        .future-data {
+            grid-column-start: first;
+            grid-column-end: end;
+            grid-row-start: row2;
+            grid-row-end: row3;
+            margin-top: 2rem;
+
+            .header-title {
+                font-size: 2rem;
+                font-weight: 700;
+            }
+
+            .content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .exp-data {
+                    padding: 1.4rem 1.8em;
+                    position: relative;
+                    z-index: 1;
+
+                    .title {
+                        font-size: 0.9rem;
+                        white-space: nowrap;
+                    }
+
+                    .amount {
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 600;
+                        font-size: 1.5rem;
+                    }
+
+                    .dot {
+                        $size: 3rem;
+                        height: $size;
+                        width: $size;
+                        background-color: $pink;
+                        border-radius: 100px;
+                        position: absolute;
+                        opacity: 0.2;
+                        left: 70%;
+                    }
+                }
+            }
+        }
+
+        .graphData {
+            height: 20rem;
+        }
+    }
+
+    
+}

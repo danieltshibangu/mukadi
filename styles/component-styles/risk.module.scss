@@ -1,0 +1,169 @@
+$black : #191D21;
+$white: #F5F0F6;
+$green: #D9F0DC;
+$pink: #FBE6DA;
+$darkorange: #FF743C;
+$lightorange: #FF896D;
+$darkpink: #FFD7C3;
+$darkgreen:#7FD1AE;
+$backwhite: #F1F4F9;
+$backwhite: #F1F4F9;
+$gold: #FFC700;
+$topbar-height: 0;
+$sidebar-width: 7%;
+
+.risks {
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+
+
+    header {
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;;
+
+        .color-bar {
+            background-color: $lightorange;
+            height: 2rem;
+            width: 1rem;
+            margin: 1rem;
+            border-radius: 4px;;
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+    }
+
+    .priceEntry {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input {
+            padding: 1rem;
+            border: none;
+            border-bottom: 1px solid black;
+            margin: 1rem;
+            font-size: 2rem;;
+            font-family: 'Shippori Mincho';
+            font-weight: 800;
+            width: 15rem;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            /* display: none; <- Crashes Chrome on hover */
+            -webkit-appearance: none;
+             margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+        }
+    }
+
+    .riskType {
+        padding: 0rem;
+        text-align: center;
+        margin: 0 auto;
+
+
+        .status {
+            height: 3rem;
+            width: 5rem;
+            background-color: $gold;
+            margin: 0rem auto;
+            border-radius: 10px;;
+            -webkit-box-shadow: -4px 10px 110px 28px rgba(255,199,0,0.41);
+            -moz-box-shadow: -4px 10px 110px 28px rgba(255,199,0,0.41);
+            box-shadow: -4px 10px 110px 28px rgba(255,199,0,0.41);
+        }
+        .feedback {
+            margin: 1rem 2rem;
+        }
+    }
+
+    .breakdown {
+        margin: 0 4rem;
+        display: flex;
+        justify-content: center;;
+        flex-direction: column;
+
+        .budgetHeader {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            position: relative;
+
+            .dot1 {
+                $size: 9rem;
+                height: $size;
+                width: $size;
+                background-color: #BDD6F5;
+                border-radius: 100px;
+                position: absolute;
+                opacity: 0.2;
+                left: 0rem;
+            }
+
+            .dot2 {
+                $size: 9rem;
+                height: $size;
+                width: $size;
+                background-color: $green;
+                border-radius: 100px;
+                position: absolute;
+                opacity: 0.3;
+                right: 0rem;
+            }
+
+            .title {
+                font-size: 1rem;
+                color:rgba(0, 0, 0, 0.5);
+                position: relative;
+                z-index: 4;
+            }
+
+            .amount {
+                font-size: 3rem;
+                font-weight: 700;
+                position: relative;
+                z-index: 4;
+            }
+        }
+
+        .subsection {
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+        
+        .requiredBills {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+
+            .category {
+                display: flex;
+                align-items: center;
+                gap:2rem;
+                padding: 0.8rem;
+
+                .backgroundColor {
+                    $size: 3rem;
+                    width: $size;
+                    height: $size;
+                    background-color: rgba($green, 0.9);
+                    border-radius: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+
+        
+    }
+}

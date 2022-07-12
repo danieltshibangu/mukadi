@@ -16,8 +16,9 @@ const Transactions = ({activity}) => {
                 </div>
             </div>
 
+            <div className={styles.amount}>${activity.amount}</div>
+
             <div style={{ width: '31%'}}>
-                <p className={styles.amount}>${activity.amount}</p>
                 {activity.stillActive == 'active' ? 
                 <Button variant="success">Active</Button> 
                 : 
