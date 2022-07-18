@@ -11,6 +11,8 @@ import Credit from '../../components-main/Credit'
 import SavingsInsight from '../../components-main/SavingsInsight'
 import Subscriptions from '../../components-main/Subscriptions'
 import Risk from '../../components-main/Risk'
+import Budget from '../../components-main/Budget'
+import Rightbar from '../../components-main/Rightbar'
 
 const index = () => {
 
@@ -18,17 +20,17 @@ const index = () => {
   return (
     <div className={styles['main-content']}>
       <Sidebar2 />
-        
-        <Topbar />
+      <Topbar />
 
         <main className={styles['main']}>
+          
 
           <h4 className={styles.dashTitle}>Dashboard</h4>
           
           <div className={styles['main-content']}>
             <Overview />
-            <Credit />
             <SavingsInsight />
+            <Budget />
             <Subscriptions />
             <Risk />
 

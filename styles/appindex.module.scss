@@ -10,7 +10,7 @@ $backwhite: #F1F4F9;
 $backwhite: #F1F4F9;
 $gold: #FFC700;
 $topbar-height: 0;
-$sidebar-width: 7%;
+$sidebar-width: 7rem;
 
 
 @media screen and (min-width: 801px) {
@@ -29,10 +29,8 @@ $sidebar-width: 7%;
 
         .main-content {
             display: flex;
-            flex-wrap: wrap;
             gap: 1rem;
-
-
+            flex-wrap: wrap;
             
 
             .bills {

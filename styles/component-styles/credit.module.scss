@@ -17,30 +17,35 @@ $sidebar-width: 7%;
     background-color: #fff;
     border-radius: 5px;
     position: relative;
-    padding: 2rem 2rem;;
+    padding: 2rem;;
 
-    .credit-content {
-        padding: 1.3rem;
+    header {
+        display: flex;
+        align-items: center;
 
-        header {
-            display: flex;
-            align-items: center;
-
-            .color-bar {
-                background-color: $lightorange;
-                height: 2rem;
-                width: 1rem;
-                margin: 0 0.5rem;
-                border-radius: 4px;
-            }
-
-            p {
-                font-weight: 600;
-                font-size: 1.2rem;
-            }
+        .color-bar {
+            background-color: $lightorange;
+            height: 2rem;
+            width: 1.2rem;
+            margin: 0 0.5rem;
+            border-radius: 4px;
         }
 
+        p {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+    }
+
+    .credit-content {
+        padding: 2rem;
+
+        
+
         .credit-info {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
             padding: 1rem;;
 
             .score {
@@ -49,15 +54,15 @@ $sidebar-width: 7%;
 
                 .dot {
                     background-color: #7FD1AE;
-                    $size: 7rem;
+                    $size: 9rem;
                     height: $size;
                     width: $size;
                     border-radius: 100px;
                     position: absolute;
                     z-index: 0;
                     opacity: 0.2;
-                    left: 0;
-                    top: 0px;
+                    right: -2.7rem;
+                    top: -4rem;
                 }
 
                 .credit-score {
@@ -70,7 +75,6 @@ $sidebar-width: 7%;
                 }
 
                 .rate {
-                    background: $green;
                     width: 6rem;
                     padding: 0.3rem;
                     border-radius: 20px;
@@ -81,7 +85,7 @@ $sidebar-width: 7%;
                 }
 
                 .points {
-                    font-size: .8rem;
+                    font-size: 1.5rem;
                     font-weight: 700;
                     color: #6ED47C
                 }

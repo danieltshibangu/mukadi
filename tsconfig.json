@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "plaid-integration/frontend/src/index.js", "plaid-integration/frontend/src/App.js", "plaid-integration/frontend/src/App.js", "plaid-integration/frontend/src/App.js", "plaid-integration/frontend/src/App.js", "plaid-integration/frontend/components/Link.jsx", "plaid-integration/frontend/src/App.js"  ],
   "exclude": [
     "node_modules"
   ]

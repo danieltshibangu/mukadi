@@ -1,19 +1,33 @@
 import React from 'react'
+import BudgetBarGraphOverview from '../charts/BudgetBarGraphOverview'
+import styles from '/styles/component-styles/budget.module.scss'
 
 const Budget = () => {
   return (
     <div>
-        <div className={styles.sideCol}>
-            <div className={styles.bills}>
-              <div className={styles.frame}>
-                <header>
+        
+
+            {/* budget graph section */}
+            <div className={styles.budget}>
+              <header>
                   <div className={styles['color-bar']}></div>
-                  <p className={styles.title}>Upcoming Bills</p>
+                  <p className={styles.title}>Your Budgets</p>
                 </header>
 
-                <div className={styles.content}>
+                <div className={styles['budget-content']}>
+              <div className={styles.budgetGraph}>
+                
 
-                  <table>
+                <div className={styles.graph}>
+                  <BudgetBarGraphOverview  />
+                </div>
+              </div>
+
+               <div className={styles['upcoming-bills']}>
+                 <div className={styles.content}>
+                 <table>
+                   <p className={styles.billTitle}>Upcoming Bills</p>
+                   <hr width={100} />
                     <tr style={{ borderBottom: '1px solid rgba(0, 0, 0, 0.1)'}}>
                       <td style={{ borderRight: '1px solid rgba(0, 0, 0, 0.1)'}}>
                         <div className={styles.rent}>
@@ -61,7 +75,7 @@ const Budget = () => {
 
                     <tr>
                       <td style={{ borderRight: '1px solid rgba(0, 0, 0, 0.1)'}}>
-                        <div className={styles['percentage-income']}>
+                        <div className={styles['rent']}>
                           <div className={styles['upper-detail-format']}>
                             <div className={styles.detail}>
                               <h5>Percent of Income</h5>
@@ -104,28 +118,12 @@ const Budget = () => {
                       </td>
                     </tr>
                   </table>
-                  
-
-  
-
-
-                </div>
+                 </div>
+               </div>
               </div>
-            </div> 
-
-            {/* budget graph section */}
-             <div className={styles.budgetGraph}>
-              <header>
-                <div className={styles['color-bar']}></div>
-                <p className={styles.title}>Your Budgets</p>
-              </header>
-
-              <div className={styles.graph}>
-                <BudgetBarGraphOverview  />
-              </div>
-            </div> 
+            </div>
           </div>
-    </div>
+ 
   )
 }
 

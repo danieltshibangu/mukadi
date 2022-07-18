@@ -9,10 +9,10 @@ $darkgreen:#7FD1AE;
 
 .header {
     position: relative;
-    $sidebar-width: 7%;
+    $sidebar-width: 7rem;
     left: $sidebar-width; // this is the width of the sidebar
     top: 0;
-    width: 100% - $sidebar-width; 
+    width: 120rem - $sidebar-width; 
     background-color:  #f8f8ff;
     z-index: 20;
     
