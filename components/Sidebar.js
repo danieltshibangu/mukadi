@@ -14,7 +14,7 @@ function Sidebar() {
     <nav>
         <div className={styles.sidebar}>
             <div className={styles['logo-details']}>
-                <img src='/mukadi-logo-black.svg' />
+                <img src='/Mukadi-logo.svg' />
                 <img src='/MUKADI.svg' style={{ height: '1.1rem', marginLeft: '-1.4rem'}} />
             </div>
 

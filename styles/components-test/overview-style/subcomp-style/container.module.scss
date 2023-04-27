@@ -1,0 +1,28 @@
+$black : #191D21;
+$white: #F5F0F6;
+$green: #D9F0DC;
+$pink: #FBE6DA;
+$darkorange: #FF743C;
+$lightorange: #FF896D;
+$darkpink: #FFD7C3;
+$darkgreen:#7FD1AE;
+$backwhite: #F1F4F9;
+$backwhite: #F1F4F9;
+$gold: #FFC700;
+
+.outer {
+    background-color: #fff;
+    height: 19vh;
+    width: 21vh;
+    border-radius: 30px;
+
+    .wrapper {
+        padding: 1.6rem;
+        position: relative;
+
+        i:first-child { font-size: 2.5rem};
+        .amount { font-size: 150%; font-weight: 700; color: $black};
+        .description {font-size: .9rem;}
+        
+    }
+}

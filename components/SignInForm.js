@@ -1,26 +1,47 @@
 import React, { Component } from 'react';
 import styles from '../styles/login-box.module.scss'
-import handleLogin from '../pages/api/auth/signin-auth';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import  Link from 'next/link'
-import { Layout } from './Layout';
 import { Form, Button } from 'react-bootstrap';
-
-// create state for login 
-// create signup 
+import { useRouter } from 'next/router';
+import axios from 'axios';
+import supabase from '../supabase/supabase-config';
+import { useAuth } from '../context/user';
 
 
 export default function SignInForm() {
-
-    const [loading, setloading] = useState(false)
+    const router = useRouter();
+    const [loading, setLoading] = useState(false)
     const [email, setEmail] = useState('')
     const [password, setPassword ] = useState('')
+    const DASHBOARD = 'http://localhost:5000/app'
+    const INTEGRATION = 'http://localhost:5000/integration'
+
+   
+    const {login} = useAuth();
+
+    const handleClick = (new_email, new_password) => {
+            setLoading(true);   // shows 'loading' instead of button
+            try {
+                login(new_email, new_password)
+            } catch(error) {
+                setLoading(false)
+                console.log(error)
+                setEmail('')
+                setPassword('')
+            }
+
+    }
 
     return (
+
+
+
+
+        
         <div className={styles['login-box']}>
-            <Layout />
             <div className={styles['left-content']}>
-            <Form onSubmit={handleLogin} className={styles['form-grid']} style={{ width: '120%'}}>
+            <Form className={styles['form-grid']} style={{ width: '120%'}}>
                 <Form.Group className={styles['email-field']} controlId="formEmail">
                     <Form.Label style={{ fontFamily: 'Poppins', fontSize: '0.8rem'}}>Email</Form.Label>
                     <Form.Control 
@@ -50,9 +71,7 @@ export default function SignInForm() {
                     type="submit"
                     onClick={(e) => {
                         e.preventDefault()
-                        handleLogin(email)
-                        setEmail('')
-                        setPassword('')
+                        handleClick(email, password)   
                     }}
                     disabled={loading}
                 >

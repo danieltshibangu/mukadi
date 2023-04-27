@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '/styles/component-styles/overview.module.scss'
 import { InputGroup, Button, FormControl, Dropdown} from 'react-bootstrap'
-import ExpenseIncomeOverview from '/charts/ExpenseIncomeOverview'
-import data from '/charts/ExpenseIncomeData'
+import Child from './Child'
+
+
+
 
 const Overview = () => {
+
+  
   return (
     <div>
         <div className={styles.general}>
@@ -17,29 +21,31 @@ const Overview = () => {
                 <div className={styles['total-earnings']}>
                   <div className={styles['earnings-content']}>
                     <div className={styles.backColor}>
-                      <i class='bx bx-wallet-alt' ></i>
+                      <i className='bx bx-wallet-alt' ></i>
                     </div>
 
                     <div className={styles.rate}>
-                      <i class='bx bx-up-arrow-alt' ></i>
+                      <i className='bx bx-up-arrow-alt' ></i>
                       <p>3.4%</p>
                     </div>
 
                     <div className={styles['account-info']}>
                     <h5>Total Checking Amount</h5>
-                      <p>$2K.42</p>
+                      <p>
+                        
+                      </p>
                     </div>
                   </div>
 
 
                   <div className={styles['savings-content']}>
                     <div className={styles.rate}>
-                      <i class='bx bx-down-arrow-alt' ></i>
+                      <i className='bx bx-down-arrow-alt' ></i>
                       <p>2.1%</p>
                     </div>
 
                     <div className={styles.backColor}>
-                      <i class='bx bx-save'></i>
+                      <i className='bx bx-save'></i>
                     </div>
 
                     <div className={styles['account-info']}>
@@ -93,7 +99,6 @@ const Overview = () => {
                 </div>
 
                 <div className={styles.graphData}>
-                  <ExpenseIncomeOverview data={data} />
                 </div>
               </div>
             </div>

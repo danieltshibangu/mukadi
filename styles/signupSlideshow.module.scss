@@ -1,0 +1,51 @@
+$slide-height: 90vh;
+
+.slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+    max-height: $slide-height;
+}
+
+.slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+    margin-left: 10rem;
+}
+
+.slide {
+    height: $slide-height;
+    width: 100vh;
+    border-radius: 40px;
+}
+
+// styling the buttons themselves
+.slideshowDots {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 3rem;
+    margin-left: 1.5rem;
+    z-index: 10;
+}
+
+.slideshowDot {
+    height: 10px;
+    width: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 15px 5px 0px;
+    background-color: #fff;
+}
+
+.slideshowDot:hover {
+    width: 40px;
+    background-color: black;
+    transition: all 0.5s ease;;
+}
+
+.slideshowDot.active {
+    background-color: black;
+    transition: all 0.5s ease;;
+    width: 40px;
+}

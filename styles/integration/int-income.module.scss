@@ -1,0 +1,133 @@
+
+
+$black : #191D21;
+$white: #F5F0F6;
+$green: #D9F0DC;
+$pink: #FBE6DA;
+$darkorange: #FF743C;
+$lightorange: #FF896D;
+$darkpink: #FFD7C3;
+$darkgreen:#7FD1AE;
+$backwhite: #f8f8ff;
+$blue: #0d6efd;
+$backgroundGreen : #e3fae3;
+
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
+
+
+.entirePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:  rgba(#FF743C, 0.05);
+    height: 100vh;
+
+    .pageWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .topbar-logo {
+            height: 7vh;
+            width: 7vh;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            color: rgb(0, 0, 0, 1);
+            font-weight: 300;
+            padding: 2rem 0;
+        }
+    } 
+}
+
+.incomeSplit {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    .incomeEntry {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .payday {
+            margin-bottom: 2rem;;
+        }
+
+        .entryContent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .totalAmount {
+                font-size: 6rem;
+                font-family: 'Shippori Mincho', sans-serif;
+                font-weight: 700;
+            }
+            .incomeDisplay {
+                margin: 1rem 0;
+    
+                .income {
+                    display: flex;
+                    justify-content: center;
+                    margin: 1rem 0;
+                    gap: 2rem;
+                }
+            }
+        }
+
+       
+        
+
+        .entryText {
+            font-size: 1.1rem;
+            color: rgb(0, 0, 0, 0.5);
+            width: 40rem;
+            text-align: center;
+            font-weight: 300;
+            margin-top: 2rem;
+        }
+    }
+
+
+    .incomeAuto {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        
+        .autoText {
+            font-size: 1.1rem;
+            color: rgb(0, 0, 0, 0.5);
+            width: 40rem;
+            text-align: center;
+            font-weight: 300;
+            margin-bottom: 4rem;
+        }
+    }
+
+}
+
+.navButtons {
+    display: flex;
+    gap: 2rem;
+}
+
+.automateButton {
+    display: flex;
+    justify-content: center;
+}

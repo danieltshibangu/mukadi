@@ -1,54 +1,34 @@
 .login-box {
-    width: 50%;
     display: flex;
     background: #fff;
     border-radius: 10px;
     position: relative;
 }
 
-.firstName-field {
-    grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end:2;
-  width: 50%;
-}
-
-.lastName-field {
-    margin-left: 5%;
-
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end:2;
-    width: 50%;
-}
-
 .email-field {
-    margin-top: 3%;
+    margin-top: 1rem;
+    width: 40vh;
 }
 
 .password-field {
-    margin-top: 3%;
+    margin-top: 1rem;
+    width: 40vh;
 }
 
 .input-style {
-    padding: 4%;
+    padding: 0.8rem;
     font-family: 'Poppins';
     font-weight: 300;
 }
 
 .submit-btn{
-    margin: 5%;
-    padding: 3%;
-    border-radius: 20px;
+    margin: 1.4rem 0;
+    padding: 1rem;
+    border-radius: 5px;
     font-family: 'Poppins';
+    width: 40vh;
 }
 
-.form-grid {
-    display: grid;
-    width: 70%;
-}
 
 .login-art {
     position: absolute;

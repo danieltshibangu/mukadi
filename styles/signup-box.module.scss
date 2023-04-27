@@ -1,0 +1,46 @@
+.login-box {
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+}
+
+.firstName-field {
+    width: 10rem;
+}
+
+.lastName-field {
+    margin-left: 5%;
+
+    width: 12rem;
+}
+
+.email-field {
+    margin-top: 1rem;
+}
+
+.password-field {
+    margin-top: 1rem;
+}
+
+.input-style {
+    padding: 0.8rem;
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+
+.submit-btn{
+    margin: 1.4rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    width: 100%;
+}
+
+.form-grid {
+    display: grid;
+}
+
+.login-art {
+    position: absolute;
+}

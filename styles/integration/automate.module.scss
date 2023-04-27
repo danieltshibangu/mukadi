@@ -1,0 +1,119 @@
+.entirePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:  rgba(#FF743C, 0.05);
+    height: 100vh;
+
+    .pageWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .topbar-logo {
+            height: 7vh;
+            width: 7vh;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            color: rgb(0, 0, 0, 1);
+            font-weight: 300;
+            padding: 2rem 0;
+        }
+    } 
+}
+
+.payday {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .payWrapper {
+        width: 30rem;
+        box-shadow: rgba(99, 99, 99, 0.15) 0px 2px 8px 0px;
+        padding: 2rem;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    .navButtons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+
+    
+}
+
+.accountSection {
+    .allAccounts {
+        box-shadow: rgba(99, 99, 99, 0.15) 0px 2px 8px 0px;
+        padding: 2rem;
+        border-radius: 10px;
+        background-color: white;
+        width: 40rem;
+    
+        .bothAccounts {
+            display: flex;
+            gap: 5rem;
+        }
+    
+        .checking {
+            width: 100%;
+            .frame {
+                $size: 195px;
+                display: flex;
+                justify-content: flex-start;   
+                flex-direction: column;
+                overflow-y:auto;
+                height: $size;       
+            }
+        }    
+    }
+    
+    .selectedAccount {
+        box-shadow: rgba(99, 99, 99, 0.15) 0px 2px 8px 0px;
+        padding: 2rem;
+        border-radius: 10px;
+        background-color: white;
+        width: 40rem;
+        margin-top: 2rem;
+
+        .dashboardBtn {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+    }
+}
+
+
+.schedule {
+    margin-bottom: 2rem;;
+}
+
+.question {
+    font-weight: 500;
+}
+
+
+
+.automateSection {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}

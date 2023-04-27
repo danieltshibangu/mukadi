@@ -1,0 +1,52 @@
+$midgreen: #6ED47C;
+$black : #191D21;
+$white: #F5F0F6;
+$green: #D9F0DC;
+$pink: #FBE6DA;
+$darkorange: #FF743C;
+$lightorange: #FF896D;
+$darkpink: #FFD7C3;
+$darkgreen:#7FD1AE;
+$backwhite: #F1F4F9;
+
+.integrationPage {
+    background-color: rgba($green, 0.5);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+
+    .topbar-logo {
+        $size: 5rem;
+        height: $size;
+    }
+
+    .wrapper {
+        background-color: #fff;
+        width: 120vh;
+        height: 60vh;
+        border-radius: 15px;
+
+        .content {
+            display: flex;
+            align-items: center;
+
+            .marketing {
+                width: 50%;
+            }
+
+            .plaid-link {
+                padding: 5rem; 
+                width:50%;
+
+                .plaid-button {
+                    width: 25rem;
+                    padding: 1rem;
+                }
+            }
+        }
+
+    }
+}

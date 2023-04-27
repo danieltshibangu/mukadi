@@ -1,0 +1,52 @@
+$black : #191D21;
+$white: #F5F0F6;
+$green: #D9F0DC;
+$pink: #FBE6DA;
+$darkorange: #FF743C;
+$lightorange: #FF896D;
+$darkpink: #FFD7C3;
+$darkgreen:#7FD1AE;
+$backwhite: #F1F4F9;
+$backwhite: #F1F4F9;
+$gold: #FFC700;
+$topbar-height: 0;
+$sidebar-width: 7rem;
+
+.loginPage {
+    background-color: rgba($pink, 0.4);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    height: 70vh;
+    width: 100vh;
+    background-color: #fff;
+    border-radius: 20px;
+
+    .content {
+        display: flex;
+        align-items: center;
+
+        .marketing {
+            width: 50%;
+        }
+
+        .login {
+            padding: 7rem 0;
+
+            .introText {
+                h2 {
+                    font-size: 3rem;
+                    font-weight: 700;
+                }
+            }
+
+            .linkToReg {
+
+            }
+        }
+    }
+}

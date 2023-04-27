@@ -1,13 +1,21 @@
+import supabase from '../supabase/supabase-config';
+import Link from 'next/link'
+import axios from "axios";
+import {useEffect} from 'react'
+
+const user = supabase.auth.user();
+
 export default function Sidebar2() {
+    // we want to know about our user's state
     return (
         <div>
             <div className="sidebar close">
                 <div className="logo-details">
-                    <img src='/mukadi-logo-black.svg' alt='' />
+                    <img src='/Mukadi-logo.svg' alt='' />
                     <span className="logo-name">Mukadi</span>
                 </div>
                 <ul className="nav-links">
-                    <li>
+                    {/* <li>
                         <a href="">
                             <i className='bx bx-grid-alt'></i>
                             <span className="link-name">Dashboard</span>
@@ -98,7 +106,7 @@ export default function Sidebar2() {
                         <ul className="submenu blank">
                             <li><a className='link_name' href="">History</a></li>
                         </ul>
-                    </li>
+                    </li> */}
                     <li>
                         <a href="">
                             <i className='bx bx-cog'></i>
@@ -108,7 +116,22 @@ export default function Sidebar2() {
                             <li><a className='link_name' href="">Settings</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="">
+                                <i className='bx bx-log-out'></i> 
+                            <span className="link-name">
+                            Log Out
+                            </span>
+                        </a>
+                        <ul className="submenu blank">
+                            <li><a className='link_name' href="">
+                           Log Out
+                            </a></li>
+                        </ul>
+                    </li>
                 </ul>
+                
+
             </div>
 
                 {/* <section className="other-sidebar">

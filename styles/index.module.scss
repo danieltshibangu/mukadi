@@ -1,6 +1,7 @@
 $black : #191D21;
+$black2 : #11101D;
 $white: #F5F0F6;
-$green: #D9F0DC;
+$green: #6ED47C;
 $pink: #FBE6DA;
 $darkorange: #FF743C;
 $lightorange: #FF896D;
@@ -8,168 +9,1071 @@ $darkpink: #FFD7C3;
 $darkgreen:#7FD1AE;
 $backwhite: #F1F4F9;
 $backwhite: #F1F4F9;
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
 
-.introSection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.bannerContent {
-    padding-top: 8rem;;
-
-    .introCopy {
-        font-size: 4rem;
-        font-family: 'Caladea', serif;
-        font-weight: 600;
-        text-align: center;
-        margin: 0 auto 1.3rem auto;
-        max-width: 65%;;
-        
+// for phones
+@media only screen and (min-width: 400px) {
+    .pageWrapper {
+        //background-color: rgba($darkgreen, 0.2);
+        background-color: rgba(#FFF7E6, 0.5);
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 80px;
     }
 
-    .copydetail {
-        font-size: 1.3rem;
-        font-family: 'Caladea', sans-serif;
-        font-weight: 500;
-        text-align: center;
-        line-height: 2.11;
-        margin: 0 auto;
-        max-width: 600px;;
-    }
+    .navigation {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        min-width: 0;
+        user-select: none;
+        //background-color: rgba($darkgreen, 0.1);
+        //background-color: rgba(#FFF7E6, 0.5);
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 5%;
 
-    .joinListBar {
-        width: 20%;
-        margin: 2rem auto;
-    }
-}
+        .logo {
+            height: 74px;
+            width: 140px;
+            margin: 0;
+            min-width: 0;
+            outline: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-left: 8px;
+            margin-right: 8px;
+            flex: none;
 
-.image {
-    margin: 5rem auto;;
-    width: 70%;
-    height: auto;;
-    background-color: black;
-    height: 60vh;
-
-}
-.headImage {
-    object-fit: cover;
-    object-position: 50% 50%;
-    width: 100%;
-    height: 100%;;
-    margin: 0 auto;
-}
-
-.exploreHow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5rem 0;
-
-    .content {
-        max-width: 72%;
-
-
-        .intro {
-            font-family: 'Bariol', cursive;
-            font-style: italic;
-            text-align: center;
-            font-weight: 600;
-            font-size: 1.8rem;;
-            color: #FFC700;
+            .innerLogo {
+                width: 200px;
+                box-sizing: border-box;
+                margin: 0;
+                min-width: 0;
+            }
         }
 
-        .introBottom {
-            font-family: 'Poppins', cursive;
-            font-style: bold;
-            text-align: center;
-            font-weight: 500;
-            font-size: 2rem;;
-        }
+        .mainItems {
+            display: flex;
+            overflow: hidden;
+            -webkit-box-align: center;
+            align-items: center;
+            min-width: 0;
+            height: 64px;
 
-        .featureMini {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            margin-top: 4rem;
-            gap: 2rem;
+            .space {
+                width: 150px;
+            }
 
-            .featureItem {
-                padding: 2rem;
-
-                .number {
-                    $size: 4rem;
-                    height: $size;
-                }
-
-                h4 {
-                    font-size: 1.2rem;
-                    font-weight: 600;
-                    line-height: 25px;
-                    font-family: 'Poppins';
-                    color: $black;
-                    margin: 1rem 0;
-                }
+            .register {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 200px;
 
                 p {
-                    line-height: 2;
-                    font-size: 1rem;
-                    font-weight: 400;
-                    color: rgba($black, 0.8)
+                    font-size: 14px;
+                }
+            }
+
+            .extra {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 200px;
+
+                p {
+                    font-size: 14px;
+                }
+            }
+
+        }
+    }
+
+    // for adverstisement at top 
+    .ad  {
+        background-color: rgba(#0d6efd, 0.1);
+        height: 60px;
+        width: 100%;
+        padding: 0;;
+        margin: 0;
+        display: none;
+    }
+
+    // for the main picture 
+    .mainImage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        height: 350px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .mainCopy{
+        padding: 10px 16px;
+        
+
+        .wrapper {
+            padding-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .headline {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 300;
+            color: #1E2329;
+            font-size: 40px;
+            line-height: 50px;
+            padding-bottom: 20px;
+            margin-top: 40px;
+
+            span {
+                font-family: 'Calistoga';
+                font-weight: 300;
+                color: #1E2329;
+                font-size: 40px;
+            }
+        }
+
+        .subHeadline {
+            font-size: 20px;;
+            color: rgb(0,0,0,0.8);
+            font-weight: 300;
+            padding: 5px 0;
+            font-family: 'Plus Jakarta Sans';
+            line-height: 30px;
+            margin-bottom: 2rem;
+            
+        }
+
+        .registerEmail {
+
+            .emailEntry {
+                margin-bottom: 20px;
+
+                .entryInfo {
+                    padding-left: 1.2em;
+                    padding-right: 1.2em;
+                    padding-top: 0.8em;
+                    padding-bottom: 0.8em;
+                    border-radius: 28px;
+                    font-size: 16px;
+                    min-width: 196px;
+                    white-space: nowrap;
+                    font-family: 'Plus Jakarta Sans';
+                    background-color: #fff;
+                    letter-spacing: 0.01em;
+                    line-height: 1.2;
+                    border-color: #fff;
+                    border-width: 1px;;
+                    border-style: solid;
+                    border-image: initial;
+                }
+    
+                .entryInfo:focus {
+                    color: $black2;
+                    outline: 0;
+                    box-shadow: none;
+                    border-color: $darkorange;
+                }
+    
+                .entryInfo::placeholder {
+                    color: rgb(0,0,0,0.4);
+                    font-weight: 300;
+                }
+            }
+            
+
+
+
+            .button {
+                padding-left: 1.2em;
+                padding-right: 1.2em;
+                padding-top: 0.8em;
+                padding-bottom: 0.8em;
+                border-radius: 28px;
+                font-size: 14px;
+                min-width: 196px;
+                white-space: nowrap;
+                background-color: $darkorange;
+                font-family: 'Plus Jakarta Sans';
+                letter-spacing: 0.01em;
+                line-height: 1.2;
+                width: 100%;
+                border-color: #fff;
+                border-width: 1px;;
+                border-style: solid;
+                border-image: initial;
+            }
+        }
+    }
+
+    .sellingPoint {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 64px 32px;
+        font-family: 'Plus Jakarta Sans';
+        text-align: center;
+        color: $black2;
+        background-color: #fbfbfc;
+
+        h1 {
+            line-height: 1.15;
+            font-size: 36px;
+            letter-spacing: 0;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.35;
+            letter-spacing: 0.01px;
+            font-weight: 300;
+            margin: 12px 0 auto;
+        }
+    }
+
+
+    .features {
+        //background-color: rgba(#0d6efd, 0.01)
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgba(#0d6efd, 0.1);
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 80px;
+
+        .title {
+            text-align: center;
+            line-height: 35px;
+            padding: 0 16px;
+            color: #000;
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 600;
+        }
+
+        .description {
+            font-size: 16px;
+            text-align: center;
+
+            p {
+                font-family: 'Plus Jakarta Sans';
+                color: rgb(0,0,0,0.7);
+            }
+        }
+        
+
+        .wrapper {
+            padding: 0px 16px;
+            border-radius: 20px 20px 0 0;
+            width: 100%;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+
+            
+
+            .feature1 {
+                .backdrop {
+                    //background-color: rgba(#0d6efd, 0.07);
+                    border-radius: 8px;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0px 24px;
+                }
+                .figure {
+                    height: 250px;
+                    width: 355px;
+                    margin-bottom: 30px;
+                    border-radius: 5px;
+                }
+
+                .details {
+                    margin-top: 24px;
+
+                    .subtitle {
+                        font-family: 'Plus Jakarta Sans';
+                        font-weight: 500;
+                        line-height: 35px;
+                        font-size: 24px;
+                        margin-bottom: 1.2em;
+                    }
+
+                    .incomeDetails {
+                        p { 
+                            font-family: 'Plus Jakarta Sans';
+                            font-size: 18px;
+                            line-height: 30px;
+                            font-weight: 300;
+                            max-width: 340px;
+                        }
+
+                        .incomeList {
+                            margin: 20px 0;
+                            display: flex;
+                            flex-direction: column;
+                            padding: 0 30px;
+                            
+                            div {
+                                display: flex;
+                                margin: 5px;
+                                gap: 10px;
+
+                                i {
+                                    font-size: 25px;
+                                    color: $green;
+                                }
+
+                                p {
+                                    font-family: 'Plus Jakarta Sans';
+                                    font-weight: 300;
+                                    line-height: 28px;
+                                    font-size: 18px;
+                                    text-align: left;
+                                    strong {
+                                        border-bottom: 2px dotted rgba(#FF743C,0.8);
+                                        font-weight: 600;
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+
+
+            .feature2 {
+                .backdrop {
+                    border-radius: 8px;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0px 24px;
+                }
+                .figure {
+                    height: 250px;
+                    width: 355px;
+                    margin-bottom: 30px;
+                    border-radius: 5px;
+                }
+
+                .details {
+                    margin-top: 24px;
+
+                    .subtitle {
+                        font-family: 'Plus Jakarta Sans';
+                        font-weight: 600;
+                        line-height: 35px;
+                        font-size: 24px;
+                        margin-bottom: 1.2em;
+                    }
+
+                    .incomeDetails {
+                        p { 
+                            font-family: 'Plus Jakarta Sans';
+                            font-size: 18px;
+                            line-height: 30px;
+                            font-weight: 300;
+                            max-width: 340px;
+                        }
+
+                        .incomeList {
+                            margin: 20px 0;
+                            display: flex;
+                            flex-direction: column;
+                            padding: 0 30px;
+                            
+                            div {
+                                display: flex;
+                                margin: 5px;
+                                gap: 10px;
+
+                                i {
+                                    font-size: 25px;
+                                    color: $green;
+                                }
+
+                                p {
+                                    font-family: 'Plus Jakarta Sans';
+                                    font-weight: 300;
+                                    line-height: 28px;
+                                    font-size: 18px;
+                                    text-align: left;
+                                    strong {
+                                        border-bottom: 2px dotted rgba(#FF743C,0.8);
+                                        font-weight: 600;
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+
+
+            .feature3 {
+                .backdrop {
+                    border-radius: 8px;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0px 24px;
+                    align-items: center;
+                }
+                .figure {
+                    height: 250px;
+                    width: 355px;
+                    margin-bottom: 30px;
+                    border-radius: 5px;
+                }
+
+
+                .details {
+                    margin-top: 24px;
+
+                    .subtitle {
+                        font-family: 'Plus Jakarta Sans';
+                        font-weight: 500;
+                        line-height: 35px;
+                        font-size: 24px;
+                        margin-bottom: 1.2em;
+                    }
+
+                    .incomeDetails {
+                        p { 
+                            font-family: 'Plus Jakarta Sans';
+                            font-size: 18px;
+                            line-height: 30px;
+                            font-weight: 300;
+                            max-width: 340px;
+                        }
+
+                        .incomeList {
+                            margin: 20px 0;
+                            display: flex;
+                            flex-direction: column;
+                            padding: 0 30px;
+                            
+                            div {
+                                display: flex;
+                                margin: 5px;
+                                gap: 10px;
+
+                                i {
+                                    font-size: 25px;
+                                    color: $green;
+                                }
+
+                                p {
+                                    font-family: 'Plus Jakarta Sans';
+                                    font-weight: 300;
+                                    line-height: 28px;
+                                    font-size: 18px;
+                                    text-align: left;
+                                    strong {
+                                        border-bottom: 2px dotted rgba(#FF743C,0.8);
+                                        font-weight: 600;
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+
+            .button {
+                border-radius: 28px;
+                font-size: 20px;
+                font-weight: 500;
+                width: 100%;
+                padding: 10px 0;
+                background-color:#FFC700;
+                border: none; 
+                color: $black2;
+            }
+        }     
+    }
+
+    .decisionFeature {
+        
+        .wrapper {
+            background-color: rgba($green, 0.1);
+            padding: 50px 32px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            .title {
+                text-align: center;
+                line-height: 35px;
+                padding: 0 16px;
+                color: #000;
+                font-family: 'Plus Jakarta Sans';
+                font-weight: 600;
+            }
+
+            .description {
+                font-size: 16px;
+                text-align: center;
+    
+                p {
+                    font-family: 'Plus Jakarta Sans';
+                    color: rgb(0,0,0,0.7);
+                }
+            }
+
+            .decisionImage {
+                margin: 50px 0;
+                margin-left: 100px;
+            }
+
+            .decisionItems {
+                padding-top: 80px;
+                text-align: center;
+                .decisionFeatureItem {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 20px;
+                    padding: 0 30px;
+                    margin-bottom: 40px;
+                    img {
+                        $size: 250px;
+                        height: $size;
+                        width: $size;
+                        margin-bottom: 16px;
+                    }
+
+                    .details {
+                        h6 {
+                            font-family: 'Plus Jakarta Sans';
+                            font-weight: 500;
+                            font-size: calc(20px + 0.6472vw);
+                            line-height: 35px;
+                            margin-bottom: 8px;
+                            color: $black2;
+                            margin-bottom: .5em;
+                        }
+
+                        p {
+                            font-family: 'Plus Jakarta Sans';
+                            font-weight: 300;
+                            font-size: calc(16.5px + 0.3883vw);
+                            line-height: 1.6;
+                            color: #474D57;
+                        }
+                    }
+
+                }
+
+               
+            }
+        }
+    }
+
+    .footer {
+        background-color: $darkorange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 30px;
+
+        img {
+            height: 94px;
+            width: 180px;
+            margin: 0;
+            min-width: 0;
+            outline: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-left: 8px;
+            margin-right: 8px;
+            flex: none;
+        }
+
+        .links p {
+            color: #fff;
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 300;
+            font-size: 15px;;
+
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .navigation {
+        padding-top: 5%;
+    }
+
+    .registerEmail {
+        width: 100%;
+
+        .emailForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 100%;
+            font-size: 18px;
+
+            .entryInfo {
+                max-width: 20em;
+                width: 20em;
+                font-size: 18px;
+            }
+
+            .entryInfo::placeholder {
+                line-height: 1.2;
+                font-size: 18px;
+            }
+            
+            .button {
+                margin-right: auto;
+                margin-left: auto;
+                max-width: 250px;
+                padding: 1em 2.5em 1em;
+                line-height: 1.4;
+                letter-spacing: 0.01em;
+                font-weight: 300;
+                box-shadow: 0 0 25px -15px rgb(0 0 0 / 20%);
+
+                p {
+                    font-size: 18px;
+                }
+
+            }
+        }
+    }
+
+    .decisionFeature {
+       
+        .wrapper {
+            padding-left: 30px;
+            padding-right: 30px;
+            flex-wrap: wrap;
+
+            p {
+                max-width: 24em;
+            }
+            
+            .decisionItems {
+                max-width: 24em;
+                gap: 40px;
+            }
+        }
+    }
+
+    .features {
+        .wrapper {
+            max-width: 24em;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .navigation {
+        transition: padding 0.2s ease-in-out, background-color 0.2s linear, opacity 0.2s linear, visibility 0s 0s;
+        padding: 3% 5% 0;
+        position: fixed;
+        z-index: 11;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .pageWrapper {
+            padding-top: 10vh;
+            padding-left: 5%;
+            padding-right: 5%;
+    }
+    .mainCopy {
+        .wrapper {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            width: 100%;
+            justify-content: space-between;
+            overflow: hidden;
+
+            .mainImage {
+                max-width: 500px;
+                //flex: 1 1 1000px;
+                margin-bottom: 10px;
+                border-radius: 20px;
+                box-shadow: none;
+                padding-bottom: 50px;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    $size: 38rem;
+                    height: $size;
+                    width: $size;
+                }
+            }
+
+            .mainContent {
+                width: 40%;
+                flex: 1 0 auto;
+                line-height: 1.2;
+                font-weight: 300;;
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+
+                .miniMessage {
+                    text-align: left;
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    padding-bottom: 20px;
+
+                    i {
+                        background: rgb(245,247,246);
+                        background: linear-gradient(158deg, rgba(245,247,246,1) 0%, rgba(92,160,242,1) 71%);
+                        border-radius: 17px;
+                        padding: 12px;
+                        font-size: 20px;;
+                    }
+                }
+                .headline {
+                    margin-bottom: 2vw;
+                    text-align: left;
+                    font-size: calc(16px + 2.977vw);
+                    line-height: 1.2;
+                    margin-top: 0;
+
+                    span {
+                        font-size: calc(16px + 2.977vw);
+                    }
+                }
+
+                .subHeadline {
+                    text-align: left;
+                    max-width: 85%;
+                    font-size: 20px;
+
+                   
+                }
+            }
+
+            .registerEmail {
+                .emailForm {
+                    text-align: left;
+                    .emailEntry {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        .entryInfo {
+                            max-width: 20em;
+                            font-size: 16px;
+                            padding: 1em;
+                            padding-left: 2em;;
+                            border: 1px solid $darkorange;
+                        }
+                    
+    
+                    .button {
+                        width: 20em;
+                        text-align: center;
+                        border-radius: 0;
+                        max-width: 100px;
+                        padding: 1.2em 0;
+                        border-radius: 28px;
+
+                        p {
+                            font-size: 16px;
+                            font-weight: 300;
+                        }
+                    }
+                }
+
+
+                    .subtext {
+                        padding: 20px;
+                    }
+                }
+                
+            }
+
+            .additionalInfo {
+                display: none;
+                height: 300px;
+                justify-content: space-between;
+                margin-top: 100px;
+                gap: 3em;
+                
+                .featureOutline {
+                    position: relative;
+                    width: 300px;
+                    height: 10px;
+                    padding: 30px;
+                }
+
+                .featureImage {
+                    height: 100px;
+                    width: 100px;
+                    border-radius: 20px;
+                    position: absolute;
+                    background-image: url('/asleep-2.jpg');
+                    background-repeat:no-repeat;
+                    background-position: 20% 60%;
+                    background-size: 150%;
+                    top: 0;
+                }
+
+                .featureImageMini {
+                    position: absolute;
+                    height: 70px;
+                    width: 70px;
+                    background: rgb(225,233,235);
+                    border-radius: 20px;
+                    background: linear-gradient(142deg, rgba(225,233,235,1) 25%, rgba(218,227,230,1) 66%);
+                    top: -20px;
+                    left: 0;
+                    z-index: -2;
+                }
+
+                .description {
+                    text-align: left;
+
+                    h5 {
+                        font-family: 'Plus Jakarta Sans';
+                        font-weight: 600;
+                    }
+
+                    p {
+                        font-size: 18px;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    .decisionfeaturesWide {
+        //background-color: rgba($darkgreen, 0.2);
+        //background-color: rgba($green, 0.1);
+        
+        background-color: rgba(#FFF7E6, 0.5);
+        padding: 0 5%;
+        text-align: center;
+
+        .wrapper {
+            padding-top: 6%;
+            .content {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 7vw;
+
+                .decisionFeatures {
+                    max-width: 24em;
+                    display: block;
+                    text-align: left;
+                    font-weight: 300;
+
+                    p {
+                        font-weight: 500;
+                        display: inline-block;
+                        padding: 0.3em 0.8em;
+                        margin-left: -0.8em;
+                        margin-bottom: 0.6em;
+                        width: auto;
+                        border-radius: 1em;
+                        line-height: 1.25;
+                        text-decoration: none;
+                        font-size: 1.375rem;
+                        cursor: pointer;
+                        font-family: 'Plus Jakarta Sans';
+                    }
                 }
             }
         }
     }
-}
 
-.bigFeature1 {
-    height: 70vh;
-    background-image: linear-gradient(to right top, #e5ffdc, #e1fbdc, #def8dc, #dbf4dc, #d9f0dc);
-}
+    .decisionFeature { display: none;}
 
-// animation for fading up
+    .featuresWide {
+        padding: 6% 5%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Plus Jakarta Sans';
 
-@keyframes fadeInUp {
-    from {
-        transform: translate3d(0, 100px, 0)
+        .incomeSection {
+            display: flex;
+            align-items: center; 
+            flex-direction: column;
+            font-family: 'Plus Jakarta Sans';
+            align-items: center;
+            font-family: 'Plus Jakarta Sans';
+            text-align: center;
+            color: $black2;
+
+            .topTitle {
+                line-height: 1.15;
+                font-size: 36px;
+                font-weight: 500;
+                max-width: 600px;
+                margin-bottom: 50px;;
+            }
+
+            .mainHeadline {
+                font-size: 18px;
+                line-height: 1.35;
+                letter-spacing: 0.01px;
+                font-weight: 300;
+                margin: 10px 0;
+                margin-top: -60px;
+            }
+        }
+
+
+        .featureDetails {
+            padding: 0 30px;;
+            text-align: left;
+
+            .incomeList {
+                display: flex;
+                flex-direction: column;
+                
+                div {
+                    display: flex;
+                    margin: 5px;
+                    gap: 10px;
+
+                    i {
+                        font-size: 25px;
+                        color: $green;
+                    }
+
+                    p {
+                        font-family: 'Plus Jakarta Sans';
+                        font-weight: 300;
+                        line-height: 28px;
+                        font-size: 16px;
+                        text-align: left;
+                        strong {
+                            border-bottom: 2px dotted rgba(#FF743C,0.8);
+                            font-weight: 600;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .imageDetails {
+            img {
+                $size: 700px;
+                width: auto;
+                height: $size;
+            }
+        }
+        
+        .biggerPictureSection{
+
+            margin: 100px 0;
+            display: flex;
+            align-items: center; 
+            flex-direction: column;
+            font-family: 'Plus Jakarta Sans';
+            align-items: center;
+            font-family: 'Plus Jakarta Sans';
+            text-align: center;
+            color: $black2;
+
+            .topTitle {
+                line-height: 1.15;
+                font-size: 36px;
+                font-weight: 500;
+                max-width: 600px;
+                margin-bottom: 50px;;
+            }
+
+            .mainHeadline {
+                font-size: 18px;
+                line-height: 1.35;
+                letter-spacing: 0.01px;
+                font-weight: 300;
+                margin-top: 50px;
+                margin-bottom: 20px;
+                max-width: 70%;
+            }
+
+            .imageDetails {
+                img {
+                    $size: 500px;
+                    width: auto;
+                    height: $size;
+                }
+            }
+
+            .incomeList {
+                display: flex;
+                flex-direction: column;
+                
+                div {
+                    display: flex;
+                    margin: 5px;
+                    gap: 10px;
+
+                    i {
+                        font-size: 25px;
+                        color: $green;
+                    }
+
+                    p {
+                        font-family: 'Plus Jakarta Sans';
+                        font-weight: 300;
+                        line-height: 28px;
+                        font-size: 16px;
+                        text-align: left;
+                        strong {
+                            border-bottom: 2px dotted rgba(#FF743C,0.8);
+                            font-weight: 600;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+
+
+
     }
 
-    to {
-        transform: translate3d(0,0,0);
-        opacity: 1
-    }
+    .features {  }
 }
 
-@-webkit-keyframes fadeInUp {
-    from {
-        transform: translate3d(0,40px,0)
-    }
-
-    to {
-        transform: translate3d(0,0,0);
-        opacity: 1
-    }
-}
-
-.animated {
-    animation-duration: 2s;
-    animation-fill-mode: both;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-fill-mode: both
-}
-
-.animated2 {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-fill-mode: both
-}
-
-.animatedFadeInUp {
-    opacity: 0
-}
-
-.fadeInUp {
-    opacity: 0;
-    animation-name: fadeInUp;
-    -webkit-animation-name: fadeInUp;
-}

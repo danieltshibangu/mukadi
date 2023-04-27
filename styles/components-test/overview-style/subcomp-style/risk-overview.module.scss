@@ -1,0 +1,55 @@
+$black : #191D21;
+$white: #F5F0F6;
+$green: #D9F0DC;
+$pink: #FBE6DA;
+$darkorange: #FF743C;
+$lightorange: #FF896D;
+$darkpink: #FFD7C3;
+$darkgreen:#7FD1AE;
+$backwhite: #F1F4F9;
+$backwhite: #F1F4F9;
+$gold: #FFC700;
+$blue: #BDD6F5;
+
+.container {
+    margin: 2rem;
+    margin-bottom: 4rem;
+    background-size: 300% 300%;
+    border-radius: 10px;
+    padding: 2rem;
+    background-image: linear-gradient(
+          -45deg, 
+          $blue 0%, 
+          $green 25%, 
+          $pink 51%, 
+          $gold 100%
+    );  
+    animation: AnimateBG 20s ease infinite;
+  }
+  
+  @keyframes AnimateBG { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+
+.wrapper {
+    .score { color:rgb(255, 10, 10, 0.6) ; font-family: "Poppins", sans-serif; font-weight: 700; font-size: 2.5rem;
+    
+    span { font-size: 1.4rem; color: rgb(255, 10, 10, 0.3)}}
+    .subtitle { font-size: .9rem; font-weight: 500;}
+    .item2 { margin: 1rem 0; .rate{ font-size: 1.4rem; font-weight: 600;}}
+    .item1 { .amount{ font-size: 1.4rem; font-weight: 600;}}
+    .items { display: flex; align-items: baseline; justify-content: space-between;}
+
+    .decisions { 
+        text-align: center;
+    
+        .title { font-size: 1.6rem; font-weight: 700;}
+        .subtitle { 
+            font-size: 0.9rem; 
+            font-weight: 500;
+        }
+    }
+
+}

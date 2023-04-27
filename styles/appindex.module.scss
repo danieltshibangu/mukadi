@@ -11,412 +11,1077 @@ $backwhite: #F1F4F9;
 $gold: #FFC700;
 $topbar-height: 0;
 $sidebar-width: 7rem;
+$right-sidebar: 26%;
+$background-yellow: rgba(#ffc124, 0.08);
+$blue: #0D6EFD;
+$inner-item-black: #191D21;
+$sub-title-color: rgba($inner-item-black, 0.5);
+$gold: #ffc124;
+$green: #6ED47C;
+$orange: #FF743C;
 
 
-@media screen and (min-width: 801px) {
-    //For Laptops
+@media screen and (min-width: 1024px) { 
+
+    .root {
+        background-color: rgba(#fff, 1);
+        width: 100%;;
+    }
+
     .main {
-        //background-color: rgb(217, 240, 220, 0.7);
-        background-color:  #f8f8ff;
-        margin: $topbar-height 0 0 $sidebar-width;
-        padding: 0rem 3.5rem 5rem 3.5rem;
+        padding-left: 9%;
+        padding-top: 2em;
+        padding-bottom: 5%;
+        width: 100%;;
+    }
 
-        .dashTitle {
-            font-size: 3rem;
-            padding: 0 2rem 2rem 0rem;
-            font-weight: 600;
+    .topbar {
+        padding: 0 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .greetingMessage {
+            p:nth-child(1) {
+                font-size: 2em;
+            }
         }
 
-        .main-content {
+        .importantLinks .linkList{
             display: flex;
-            gap: 1rem;
+            align-items: center;
+            gap: 30px;
+            i { font-size: 1.3em}
+        }
+    }
+
+    .hrline {
+        padding: 1% 5%;
+        color: rgb(0,0,0,0.3)
+    }
+
+    .overviewTables {
+        margin-top: 3em;
+        padding: 1% 5%;
+        width: 100%;;
+
+        .title {
+            font-size: 1.2em;
+            font-weight: 700;
+            font-family: 'Poppins';
+        }
+
+        .graphList {
+            display: flex;
             flex-wrap: wrap;
-            
+            width: 100%;
+            align-items: flex-start;
+            gap: 50px;
 
-            .bills {
-                background-color: #fff;
-                border-radius: 10px;
-                padding-bottom: 1.7rem;;
-                padding-right: 2rem;
-                
+            .spendingBehavior {
+                flex-grow: 2;
 
-                header {
-                    display: flex;
-                    align-items: center;
-                    margin-left: 1.5rem;
-
-                    .color-bar {
-                        background-color: $darkgreen;
-                        height: 2rem;
-                        width: 1rem;
-                        margin: 1rem;
-                        border-radius: 4px;
-                    }
-
-                    .title {
-                        font-size: 1.2rem;
-                        font-weight: 600;
-                    }
+                i {
+                    font-size: 1.2em;;
+                }
+                .graphTitle {
+                    font-size: 1.1em;
+                    font-weight: 900;
+                    font-family: 'Plus Jakarta Sans';
                 }
 
-                .content {
-                    padding: 0rem 0rem 0rem 4rem;
+                .projection {
+                    font-size: 0.9em;
+                    color: rgb(0,0,0,0.7);
+                    margin: 10px 0;
+
+                    .gainsProjection {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
                     
-
-                    table td {
-                        padding: 1.5rem;
+                    .gains {
+                        $size: 0.6em;
+                        width: $size;
+                        height: $size;
+                        background-color: #4991fd;
                     }
 
-                    .rent {
-                        .upper-detail-format {
-                            display: flex;
-                            justify-content: space-between;
-                            gap: 2rem;
-
-                            h5 {
-                                font-size: 1rem;;
-                            }
-
-                            p {
-                                font-size: 1.7rem;
-                                font-family: 'Poppins';
-                                font-weight: 500;
-                                letter-spacing: -1px;
-                            }
-                        }
-                        
-                        .billModel {
-                            background-color: $green;
-                            border-radius: 100px;
-                            $size: 2.5rem;
-                            height: $size;
-                            width: $size;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-
-                            i {
-                                font-size: 1.6rem;
-                                color: $darkgreen;
-                            }
-                        }
-
-                        .last-payment-comparison {
-                            display: flex;
-                            align-items: center;
-                            gap: 0.7rem;
-
-                            i {
-                                font-size: 2rem;
-                                color: $gold;
-                            }
-
-                            em {
-                                color: $gold;
-                                font-size: 0.9rem;
-                            }
-
-                            span {
-                                text-transform: uppercase;
-                                color:rgba(0, 0, 0, 0.5);
-                                font-size: 0.9rem;
-                            }
-                        }
+                    .totalGained {
+                        font-size: 1.3em;
+                        font-family: 'Poppins';
+                        font-weight: 700;
+                        color: #4991fd;
                     }
 
-                    .percentage-income {
-                        .upper-detail-format {
-                            display: flex;
-                            justify-content: space-between;
-                            gap: 4rem;
-
-                            h5 {
-                                font-size: 1rem;;
-                            }
-
-                            p {
-                                font-size: 1.7rem;
-                                font-family: 'Poppins';
-                                font-weight: 500;
-                                letter-spacing: -1px;
-                            }
+                    .expenseProjection {
+                        .totalExpenses {
+                            font-size: 0.9em;
+                            color: #FF743C;
+                            font-family: 'Poppins';
+                            font-weight: 600;
                         }
-                        
-                        .billModel {
-                            background-color: $green;
-                            border-radius: 100px;
-                            $size: 2.5rem;
-                            height: $size;
-                            width: $size;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-
-                            i {
-                                font-size: 1.6rem;
-                                color: $darkgreen;
-                            }
-                        }
-
-                        .last-payment-comparison {
-                            display: flex;
-                            align-items: center;
-                            gap: 0.7rem;
-
-                            i {
-                                font-size: 2rem;
-                                color: $gold;
-                            }
-
-                            em {
-                                color: $gold;
-                                font-size: 0.9rem;
-                            }
-
-                            span {
-                                text-transform: uppercase;
-                                color:rgba(0, 0, 0, 0.5);
-                                font-size: 0.9rem;
-                            }
+                        span {
+                            font-family: 'Plus Jakarta Sans';
+                            font-weight: 500;
+                            font-size: 0.9em;
+                            padding-right: 7px;;
+                            color: $black;
                         }
                     }
-
-                    
                 }
-
-            }
-
-            .budgetGraph {
-                background-color: #fff;
-                border-radius: 10px;
-                padding: 1rem;
-                margin-top: 1rem;
 
                 .graph {
-                    width: 100%;
+                    width: 40vw;
+                    max-width: 35vw;
+                    height: 15em;
+                    margin: -10px;
+                }
+            }
+
+            .alerts {
+                .graphTitle {
+                    font-size: 1.1em;
+                    font-weight: 900;
+                    font-family: 'Plus Jakarta Sans';
                 }
 
-                header {
+                .projection {
+                    font-size: 0.9em;
+                    color: rgb(0,0,0,0.7);
+                    margin: 10px 0;
+                }
+
+                .legend {
                     display: flex;
                     align-items: center;
-                    margin: 1.5rem;
+                    gap: 30px;
 
-                    .color-bar {
-                        background-color: $green;
-                        height: 2rem;
-                        width: 1rem;
-                        margin: 0 1rem 0 0;
-                        border-radius: 4px;
+                    p {
+                        font-size: 0.9em;
+                        color: rgb(0,0,0,0.8);
                     }
 
-                    .title {
-                        font-size: 1.2rem;
-                        font-weight: 600;
+                    .deposits {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        div {
+                            background-color: $gold;
+                            $size: 0.6em;
+                            height: $size;
+                            width: $size;
+                        }
+                    }
+
+                    .withdrawal {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        div {
+                            background-color: #4991fd;
+                            $size: 0.6em;
+                            height: $size;
+                            width: $size;
+                        }
+                    }
+
+                    .saved {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        div {
+                            background-color: $lightorange;
+                            $size: 0.6em;
+                            height: $size;
+                            width: $size;
+                        }
+                    }
+
+                    .overspent {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        div {
+                            background-color: $green;
+                            $size: 0.6em;
+                            height: $size;
+                            width: $size;
+                        }
                     }
                 }
+
+                .graph {
+                    width: 40vw;
+                    max-width: 35vw;
+                    height: 15em;
+                    margin: -10px;
+                }
+            }
+
+            .shoppingSpree {
+                .graphTitle {
+                    font-size: 1.1em;
+                    color: $blue;
+                    font-weight: 700;
+                    font-family: 'Poppins';
+                }
+
+                .projection {
+                    font-size: 0.9em;
+                    color: rgb(0,0,0,0.7);
+                }
+
+                .graph {
+                    width: 80vw;
+                    height: 30em;
+                }
+            }
+        }
+    }
+
+    .overview {
+        margin-top: 5rem;
+        padding: 1% 5%;
+
+        .subtitle {
+            font-size: 0.8rem;;
+            color: $sub-title-color;
+        }
+
+        .totalAmount {
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+    }
+
+    .accountOverview {
+        display: flex;
+        padding: 1% 5%;
+        width: 100%;;
+        gap: 30px;
+
+        .titleHeader {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .accountHeader {
+            font-size: 0.8em;
+            color: $sub-title-color;
+            margin-top: 5px;
+        }
+
+        .checking {
+            width: 50%;
+            .title { 
+                font-size: 0.9em;
+                color: $sub-title-color;}
+        }
+
+        .recentActivity {
+            .title { font-weight: 400;}
+
+            .activityChart {}
+
+            .activityChart .bankTitle {
+                color: $blue;
+                font-size: 0.8em;
+            }
+
+            .activityChart .details {
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+            }
+
+            .activityChart .details .itemName {
+                font-size: 0.9em;
+                font-weight: 500;
+            }
+
+            .activityChart .details .amount {
+                font-size: 1em;
+                font-weight: 700;
+                font-family: 'Poppins';
+            }
+
+            .activityChart .details .date {
+                font-weight: 500;
+                font-size: 0.9em;
+                color: $sub-title-color;
+                font-style: italic;
+            }
+        }
+
+        .savings {
+            width: 50%;
+            .title { 
+                font-size: 0.9em;
+                color: $sub-title-color;}
+        }
+
+        .graph {
+            width: 100%;
+            height: 10em;
+        }
+
+        .totalBalance {
+            display: flex;
+            align-items: baseline;
+            gap: 40px;
+
+            
+
+            .change div {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                color: $darkgreen;
+                font-weight: 500;
+
+                i {font-size: 0.2em; color: $black}
+            }
+
+            .totalAmount {
+                font-weight: 700;
+            }
+        }
+
+        .gainloss {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin: 3em 0;
+
+            .gain{}
+
+            .gainLegend {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .gainID {
+                    height: 0.5em;
+                    width: 0.5em;
+                    background-color: $darkgreen;
+                }
+
+                p { font-size: 0.8em}
+            }
+
+            .lastDeposit{
+                margin-top: 10px;;
+                font-size: 0.9em;
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+                .amount { font-size: 1.2em; font-weight: 700;}
+                .date { font-size: 0.9em; color: $sub-title-color}
+            }
+
+            .progressGraph {
+                width: 17rem;
+                height: 8rem;
+            }
+
+            .loss {}
+
+            .lossLegend {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .lossID {
+                    height: 0.5em;
+                    width: 0.5em;
+                    background-color: $darkorange;
+                }
+                p { font-size: 0.8em}
+            }
+
+            .lastWithdrawal {
+                margin-top: 10px;;
+                font-size: 0.9em;
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+                .amount { font-size: 1.2em; font-weight: 700;}
+                .date { font-size: 0.9em; color: $sub-title-color}
+            }
+        } // end of gain loss
+    } // end of Account overview section
+
+    .highlights {
+        margin-top: 3em;
+        padding: 1% 5%;
+        
+            
+        .highlightsWrapper {
+            padding: 1% 0;
+        }
+
+        h2 {
+            font-size: 1em;
+            font-weight: 600;
+            line-height: 10px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+
+            .item:nth-child(1) {
+                background-color: rgba($orange, 0.1);
+            }
+
+            .item:nth-child(2) {
+                background-color: rgba($gold, 0.2);
+            }
+
+            .item:nth-child(3) {
+                background-color: rgba($green, 0.15);
+            }
+
+            .item {
+                border-radius: 5px;
+                width: 40%;
+                flex-grow: 1;
+                padding: 15px 25px;
+
+                .tophalf {
+                    border-bottom: 2px dotted black;
+                    padding-bottom: 18px;
+                    position: relative;
+
+                    .header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+
+                    img {
+                        $size: 30px;
+                        max-width: $size;
+                        max-height: $size;
+                        opacity: 0.2;
+                    }
+
+                    .amount {
+                        font-size: 1.3em;;
+                        margin-top: 20px;
+                        font-family: 'Shippori Mincho';
+                        //font-family: $jakarta;
+                        font-weight: 800;
+                    }
+    
+                    div {
+                        display: flex;
+                        gap: 10px;
+                    }
+    
+                    i {
+                        font-size: 2.3em;
+                    }
+    
+                    .cardTitle {
+                        font-size: .8em;;
+                        color: rgba(#000, 0.9);
+                    }
+
+                }
+
+                .bottomhalf {
+                    padding: 20px 0;
+
+                    .infoGroup {
+                        display: flex;
+                        gap:15px;
+
+                    }
+                    p {
+                        font-size: 0.8em;
+                        font-weight: 300;
+                    }
+                }
+
                 
             }
 
+        }
+    } // end of highlights 
 
-            .recent-subscriptions {
-                background-color: #fff;
-                border-radius: 10px;
-                padding: 1rem;
+    .decisionsReport {
+        margin-top: 3em;
+        padding: 1% 5%;
 
-                header {
+        h4 {
+            font-size: 1em;
+            font-weight: 600;
+            line-height: 10px;
+            margin-bottom: 30px;
+        }
+
+        .positive {  
+             width: 100%;
+             border-radius: 10px;
+             border: 1px solid rgba(0, 0, 0, 0.1);
+             padding: 10px;
+ 
+             .wrapper {
+                 display: flex;
+                 gap: 10px;
+                 width: 100%;
+                 align-items: center;
+             }
+
+             .leftSide {
+                 background-color: rgba($darkgreen, 0.3);
+                 border-radius: 10px;
+                 padding: 15px;
+                 display: block;
+                 width: 35%;
+                 position: relative;
+                 box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+
+                 i {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;;
+                 }
+
+                
+             }
+ 
+             .keyStatline {
+                 display: flex;
+                 align-items: center;
+
+                 .keyDecisions {
+                    font-size: 3em;
+                    font-weight: 500;
+    
+                    span {
+                        font-size: 1rem;
+                    }
+                }
+             }
+ 
+ 
+             .subtitle {
+                 color: $black;
+                 font-size: 0.8em;
+                 text-align: left;
+                 width: 100%;
+             }
+
+             .rightSide {
+                 padding: 10px;
+                 .top {display: flex;}
+
+                 .comparison .header {
                     display: flex;
+                    margin-bottom: 10px;
                     align-items: center;
-                    margin-left: 1.5rem;;
+                    gap: 10px;
 
-                    .color-bar {
-                        background-color: $lightorange;
-                        height: 2rem;
-                        width: 1rem;
-                        margin: 1rem;
-                        border-radius: 4px;;
+                    p {
+                        font-size: 1em;
+                        font-weight: 700;
+                        color: $blue;
+                    }
+                    
+
+                    i {font-size: 1.4em;color: $blue;}
+                 }
+
+                 .comparison .comparisonDetails {
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     width: 100%;
+                     gap: 50px;
+                     p {font-size: 0.8em;}
+
+                     .item {
+                         display: flex;
+                         align-items: center;
+                         gap: 15px;
+
+                         .saved {
+                             height: .7em;
+                             width: .7em;
+                             background-color: $pink;
+                         }
+
+                         .goalsReached {
+                            height: .7em;
+                            width: .7em;
+                            background-color: $green;
+                        }
+                     }
+
+                     .title {
+                         color: $sub-title-color;
+                         margin-bottom: 5px;
+                     }
+                 }
+
+                 .lastWeek {
+                     text-align: left;
+                 }
+
+                 .divider {
+                     text-align: center;
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: center;
+                     align-items: center;
+
+                     hr {
+                         height: 30px;
+                         width: 1px;;
+                         margin: 0;;
+                     }
+
+                     p {
+                         font-weight: 600;
+                        margin: 5px 0;;
+                     }
+                 }
+
+                 .thisWeek {
+                     text-align: right;
+                 }
+                 .graph {
+                    height: 7em;
+                    width: 20em;
+                    margin-left: -4em;;
+                    margin-right: -2em;
+                 }
+             }
+
+             .decisionItem {
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                gap: 3em;
+
+                .datePrice {
+                    .date {
+                        font-size: 0.8em;
+                        color: rgba($sub-title-color, 0.3);
+                        font-weight: 700;
+                    }
+
+                    .amount {
+                        font-weight: 800;
+                        font-size: 1em;;
+                    }
+                }
+
+                .itemDescription {
+                    .itemName {
+                        font-size: 1.1em;
+                        font-weight: 600;
+                    }
+
+                    .category {
+                        font-size: 0.8em;
+                        font-weight: 600;
+                        color: $sub-title-color;
+
+                        span {
+                            color: $blue;
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+
+                .impact {
+                    border-top: 1px solid rgba(0, 0, 0, 0.06);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                    padding: 1em 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    .header {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        text-align: center;
+
+                        .title {
+                            font-size: 0.9em;
+                        }
+                    }
+
+                    .benefit {
+                        font-size: 0.9em;
+                        color: #6ED47C;
+                    }
+                }
+             }
+         }
+ 
+         .negative {  
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            margin-top: 30px;
+
+            .wrapper {
+                display: flex;
+                gap: 10px;
+                width: 100%;
+                align-items: center;
+            }
+
+            .leftSide {
+                background-color: rgba($orange, 0.3);
+                border-radius: 10px;
+                padding: 15px;
+                display: block;
+                width: 35%;
+                position: relative;
+                box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+
+                i {
+                   position: absolute;
+                   top: 20px;
+                   right: 20px;;
+                }
+
+               
+            }
+
+            .keyStatline {
+                display: flex;
+                align-items: center;
+
+                .keyDecisions {
+                   font-size: 3em;
+                   font-weight: 500;
+   
+                   span {
+                       font-size: 1rem;
+                   }
+               }
+            }
+
+
+            .subtitle {
+                color: $black;
+                font-size: 0.8em;
+                text-align: left;
+                width: 100%;
+            }
+
+            .rightSide {
+                padding: 10px;
+                .top {display: flex;}
+
+                .comparison .header {
+                   display: flex;
+                   margin-bottom: 10px;
+                   align-items: center;
+                   gap: 10px;
+
+                   p {
+                       font-size: 1em;
+                       font-weight: 700;
+                       color: $blue;
+                   }
+                   
+
+                   i {font-size: 1.4em;color: $blue;}
+                }
+
+                .comparison .comparisonDetails {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    gap: 50px;
+                    p {font-size: 0.8em;}
+
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+
+                        .saved {
+                            height: .7em;
+                            width: .7em;
+                            background-color: $pink;
+                        }
+
+                        .goalsReached {
+                           height: .7em;
+                           width: .7em;
+                           background-color: $green;
+                       }
+                    }
+
+                    .title {
+                        color: $sub-title-color;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .lastWeek {
+                    text-align: left;
+                }
+
+                .divider {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    hr {
+                        height: 30px;
+                        width: 1px;;
+                        margin: 0;;
                     }
 
                     p {
                         font-weight: 600;
-                        font-size: 1.2rem;
+                       margin: 5px 0;;
                     }
                 }
 
-                .content {
-                    
+                .thisWeek {
+                    text-align: right;
+                }
+                .graph {
+                   height: 7em;
+                   width: 20em;
+                   margin-left: -4em;;
+                   margin-right: -2em;
                 }
             }
-           
-        }
-    }
-}
 
-@media screen and (min-width: 600px) {
-    //For Tablets
-        .container {
-            width: 100;
+            .decisionItem {
+               padding: 20px;
+               display: flex;
+               align-items: center;
+               gap: 3em;
+
+               .datePrice {
+                   .date {
+                       font-size: 0.8em;
+                       color: rgba($sub-title-color, 0.3);
+                       font-weight: 700;
+                   }
+
+                   .amount {
+                       font-weight: 800;
+                       font-size: 1em;;
+                   }
+               }
+
+               .itemDescription {
+                   .itemName {
+                       font-size: 1.1em;
+                       font-weight: 600;
+                   }
+
+                   .category {
+                       font-size: 0.8em;
+                       font-weight: 600;
+                       color: $sub-title-color;
+
+                       span {
+                           color: $blue;
+                           font-size: 0.9em;
+                       }
+                   }
+               }
+
+               .impact {
+                   border-top: 1px solid rgba(0, 0, 0, 0.06);
+                   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                   padding: 1em 0;
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                   justify-content: center;
+                   
+                   .header {
+                       display: flex;
+                       align-items: center;
+                       gap: 10px;
+                       text-align: center;
+
+                       .title {
+                           font-size: 0.9em;
+                       }
+                   }
+
+                   .benefit {
+                       font-size: 0.9em;
+                       color: #6ED47C;
+                   }
+               }
+            }
+        }
+        
+    } // end of decisions Report   
+} // end of 1024px width
+
+
+@media screen and (min-width: 1440px) { 
+    .main {
+        padding-left: 7%;;
+    }
+    .topbar {
+        padding: 0 7%;
+    }
+
+    .hrline {
+        padding: 1% 7%;
+    }
+
+    .overviewTables {
+        padding: 1% 7%;
+
+        .graphList {
+            display: grid;
+            grid-template-columns: [first] 30% [line2] 30% [line3] 30% [end];
+            justify-content: space-between;
+            align-items: baseline;
+            .spendingBehavior {
+                align-self: end;
+                .graph {
+                    max-width: 100%;;
+                    height: 15em;
+                    margin: -10px;
+                }
+            }
+
+            .expensesTracker {
+                align-self: end;
+                .graph {
+                    max-width: 100%;;
+                    height: 15em;
+                    margin: -10px;
+                }
+            }
+
+            .shoppingSpree {
+                align-self: end;
+                .graph {
+                    max-width: 100%;;
+                    height: 15em;
+                    margin: -10px;
+
+                    .heatmap {
+                        height: 15em;
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
-    
+
+    .overview {
+        padding: 1% 7%;
+    }
+
+    .accountOverview {
+        padding: 1% 7%;
+    }
+
+    .highlights {
+        padding: 1% 7%;
+
+        .cards {
+            flex-wrap: nowrap;
+            gap: 20px;
+
+            .item {
+                flex-grow: unset;
+                width: 16em;
+                height: 16em;;
+            }
+        }
+    }
+
+    .decisionsReport {
+        padding: 1% 7%;
+
+        .positive {
+             .wrapper {
+                gap: 20px;
+             }
+
+             
+        }
+
+        .negative {
+            .wrapper {
+               gap: 20px;
+            }
+
+            
+       }
+    }
+} // end of 1440px width
+
+
+@media screen and (min-width: 1900px) { 
+    .main {
+        padding-left: 5%;;
+    }
+
+    .topbar {
+        padding: 0 10%;
+    }
+
    
-.risks {
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 1rem 1.5rem;
 
+    .hrline {
+        padding: 1% 10%;
+    }
 
-    header {
-        display: flex;
-        align-items: center;
-        margin-left: 1rem;;
+    .overview {
+        padding: 1% 10%;
+    }
 
-        .color-bar {
-            background-color: $lightorange;
-            height: 2rem;
-            width: 1rem;
-            margin: 1rem;
-            border-radius: 4px;;
-        }
+    .overviewTables {
+        padding: 1% 10%;
 
-        p {
-            font-weight: 600;
-            font-size: 1.2rem;
+        .graphList .alerts {
+            .graph {
+                width: 25vw;
+            }
         }
     }
 
-    .priceEntry {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        input {
-            padding: 1rem;
-            border: none;
-            border-bottom: 1px solid black;
-            margin: 1rem;
-            font-size: 2rem;;
-            font-family: 'Shippori Mincho';
-            font-weight: 800;
-            width: 15rem;
-        }
-
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            /* display: none; <- Crashes Chrome on hover */
-            -webkit-appearance: none;
-             margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-        }
+    .accountOverview {
+        padding: 1% 10%;
     }
 
-    .riskType {
-        padding: 0rem;
-        text-align: center;
-        margin: 0 auto;
-
-
-        .status {
-            height: 3rem;
-            width: 5rem;
-            background-color: $gold;
-            margin: 0rem auto;
-            border-radius: 10px;;
-            -webkit-box-shadow: -4px 10px 110px 28px rgba(255,199,0,0.41);
-            -moz-box-shadow: -4px 10px 110px 28px rgba(255,199,0,0.41);
-            box-shadow: -4px 10px 110px 28px rgba(255,199,0,0.41);
-        }
-        .feedback {
-            margin: 1rem 2rem;
-        }
+    .highlights {
+        padding: 1% 10%;
     }
 
-    .breakdown {
-        margin: 0 4rem;
-        display: flex;
-        justify-content: center;;
-        flex-direction: column;
-
-        .budgetHeader {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 3rem;
-            position: relative;
-
-            .dot1 {
-                $size: 9rem;
-                height: $size;
-                width: $size;
-                background-color: #BDD6F5;
-                border-radius: 100px;
-                position: absolute;
-                opacity: 0.2;
-                left: 0rem;
-            }
-
-            .dot2 {
-                $size: 9rem;
-                height: $size;
-                width: $size;
-                background-color: $green;
-                border-radius: 100px;
-                position: absolute;
-                opacity: 0.3;
-                right: 0rem;
-            }
-
-            .title {
-                font-size: 1rem;
-                color:rgba(0, 0, 0, 0.5);
-                position: relative;
-                z-index: 4;
-            }
-
-            .amount {
-                font-size: 3rem;
-                font-weight: 700;
-                position: relative;
-                z-index: 4;
-            }
-        }
-
-        .subsection {
-            font-size: 1.7rem;
-            font-weight: 700;
-        }
-        
-        .requiredBills {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-
-            .category {
-                display: flex;
-                align-items: center;
-                gap:2rem;
-                padding: 0.8rem;
-
-                .backgroundColor {
-                    $size: 3rem;
-                    width: $size;
-                    height: $size;
-                    background-color: rgba($green, 0.9);
-                    border-radius: 100px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-            }
-        }
-
-
-        
-    }
-
-    .suggestions {
-        font-size: 1.7rem;
-        font-weight: 700;
+    .decisionsReport {
+        padding: 1% 11%;
     }
 }
 
+    

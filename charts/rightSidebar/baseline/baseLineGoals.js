@@ -1,0 +1,202 @@
+// install (please make sure versions match peerDependencies)
+// yarn add @nivo/core @nivo/line
+import { ResponsiveLine, Line } from '@nivo/line'
+import { DotsItem, useTheme } from '@nivo/core'
+import data from './data'
+
+const maxValue = 350;
+const minValue = 0;
+
+const DashedSolidLine = ({ series, lineGenerator, xScale, yScale}) => {
+    return series.map(({ id, data, color}, index) => (
+        <path 
+        key={id}
+        d={lineGenerator(
+            data.map((d) => ({
+                x: xScale(d.data.x),
+                y:yScale(d.data.y),
+            }))
+        )}
+        fill="none"
+        stroke={color}
+        style={
+            index % 2 === 0
+            ? {
+                // simulate line when dash stroke is even
+                strokeDasharray: "5, 8", 
+                strokeWidth: 3
+                }
+            : {
+                //simulate line with solid stroke
+                strokeWidth: 3,
+                boxShadow: 'rgba(0, 0, 0, 0.5) 0px 30px 10px 50px;'
+            }
+        }
+        />
+    ))
+}
+
+function LastPoint({ points, ...props }) {
+    const theme = useTheme()
+    const shownPoints = points.slice(-1)
+
+    //console.log(points)
+  
+    //console.log(props.lineGenerator([{ x: 1, y: 100 }]))
+  
+    return (
+      <g>
+        {shownPoints.map((point) => (
+          <DotsItem
+            key={point.id}
+            x={point.x}
+            y={point.y}
+            datum={point.data}
+            symbol={props.pointSymbol}
+            size={props.pointSize}
+            color={point.color}
+            borderWidth={props.pointBorderWidth}
+            borderColor={point.borderColor}
+            label={point.label}
+            labelYOffset={props.pointLabelYOffset}
+            theme={theme}
+            />
+        ))}
+      </g>
+    )
+  }
+
+const CustomPoint = (props) => {
+  const { currentPoint, borderWidth, borderColor } = props;
+  // it will show the current point
+  if (currentPoint) {
+    return (
+      <g>
+        <circle
+          fill="#A8EEFF"
+          r={16}
+          strokeWidth={borderWidth}
+          stroke={borderColor}
+          fillOpacity={0.35}
+          cx={currentPoint.x}
+          cy={currentPoint.y}
+        />
+        <circle
+          r={6}
+          strokeWidth={"4"}
+          stroke={"#1a6dfc"}
+          fill={"#A8EEFF"}
+          fillOpacity={0.85}
+          cx={currentPoint.x}
+          cy={currentPoint.y}
+        />
+      </g>
+    );
+  }
+};
+
+const Areas = ({
+    series, areaGenerator, xScale, yScale,
+  }) => series.map(({ id, data, color }, index) => (
+    <path
+      key={id}
+      d={areaGenerator(
+        data.map(d => ({
+          x: xScale(d.data.x),
+          y: yScale(d.data.y),
+        })),
+      )}
+      fill={index === 1 ? color : 'none'} 
+      fillOpacity={0.05}
+    />
+  ));
+
+// make sure parent container have a defined height when using
+// responsive component, otherwise height will be 0 and
+// no chart will be rendered.
+// website examples showcase many properties,
+// you'll often use just a few of them.
+const DecisionsGraph = ({ data /* see data tab */ }) => (
+    <ResponsiveLine
+        pointSize={10}
+        markers={[
+            {
+            axis: 'y',
+            value: 200,
+            lineStyle: { stroke: '#b0413e', strokeWidth: 1 },
+            legendPosition: 'bottom-left',
+            },
+        ]}
+        layers={
+            [
+              'grid',
+              'axes',
+              'areas',
+              'lines',
+              'crosshair',
+              'slices',
+              'mesh',
+              'legends',
+              'markers',
+              LastPoint,
+            ]}
+        //control the appearance of grid lines
+        theme={{
+            
+            fontSize: '0.8rem',
+            fontFamily: 'Poppins',
+            textColor: 'rgb(0, 0, 0, 0.5)',
+
+            axis: {
+              domain: {
+                line: {
+                },
+              }
+            },
+            grid: {
+              line: {
+                opacity: 1,
+                strokeWidth: 1,
+                strokeDasharray: "4 4"
+              }
+            }
+          }}
+        data={data}
+        margin={{ top: 0, right: 30, bottom: 30, left: 30 }}
+        xScale={{ type: 'point' }}
+        yScale={{
+            type: 'linear',
+            min: minValue,
+            max: maxValue,
+            maxValue: 'auto',
+            stacked: true,
+            reverse: false
+        }}
+        yFormat=" >-.2f"
+        curve="linear"
+        enableGridX={false}
+        enableSlices='x'
+        axisTop={null}
+        axisRight={null}
+        axisBottom={null}
+        axisLeft={{
+            orient: 'left',
+            tickSize: 0,
+            tickPadding: 5,
+            tickRotation: 0,
+            legendOffset: -40,
+            tickValues: 4,
+            legendPosition: 'middle'
+        }}
+        enablePoints={false}
+        enableArea={true}
+        pointColor={{ theme: 'background' }}
+        pointBorderWidth={2}
+        pointBorderColor={{ from: 'serieColor' }}
+        pointLabelYOffset={-12}
+        crosshairType="x"
+        useMesh={true}
+    />
+)
+
+export default DecisionsGraph

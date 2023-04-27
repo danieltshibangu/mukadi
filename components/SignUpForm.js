@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import styles from '../styles/login-box.module.scss'
-import handleSignup from '../pages/api/auth/signup-auth';
+import styles from '/styles/signup-box.module.scss'
 import { useState } from 'react';
 import  Link from 'next/link'
-import { Layout } from './Layout';
 import { Form, Button } from 'react-bootstrap';
+import { useRouter } from 'next/router';
+import axios from 'axios';
+
 
 // create state for login 
 // create signup 
@@ -12,18 +13,53 @@ import { Form, Button } from 'react-bootstrap';
 
 export default function SignUpForm() {
 
-    const [loading, setloading] = useState(false)
+    const [loading, setLoading] = useState(false)
+    const router = useRouter();
     const [email, setEmail] = useState('')
     const [password, setPassword ] = useState('')
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
+    const LOGIN= 'http://localhost:5000/login'
 
+    const handleClick = async (firstName, lastName, email, password) => {
+
+        setLoading(true);   // shows 'loading' instead of button
+
+        email = Buffer.from(email, 'utf8').toString('base64');
+        password = Buffer.from(password, 'utf8').toString('base64');
+        firstName = Buffer.from(firstName, 'utf8').toString('base64');
+        lastName = Buffer.from(lastName, 'utf8').toString('base64');
+
+        try {
+            const signupResponse = await axios.post( 'http://localhost:8000/api/signup', {}, {
+            params: {
+                firstName: firstName, 
+                lastName: lastName,
+                email: email, 
+                password: password
+            },
+            headers: {
+                'Content-Type': 'application/json'
+            }
+            });
+
+            if (signupResponse.status == 200) router.push(LOGIN)
+            
+        } catch (err) {
+            setLoading(false);
+            setFirstName('');
+            setLastName('');
+            setEmail('');
+            setPassword('');
+        }
+}
+
+    
 
     return (
         <div className={styles['login-box']}>
-            <Layout />
             <div className={styles['left-content']}>
-            <Form onSubmit={handleSignup} className={styles['form-grid']}>
+            <Form className={styles['form-grid']}>
                 <div style={{ display: 'flex', }}>
                 <Form.Group className={styles['firstName-field']} controlId="formFirstName">
                     <Form.Label style={{ fontFamily: 'Poppins', fontSize: '0.8rem'}}>First Name</Form.Label>
@@ -77,17 +113,14 @@ export default function SignUpForm() {
                     type="submit"
                     onClick={(e) => {
                         e.preventDefault()
-                        handleSignup(firstName, lastName, email, password)
-                        setFirstName('')
-                        setLastName('')
-                        setEmail('')
-                        setPassword('')
+                        handleClick(firstName, lastName, email, password)
                     }}
                     disabled={loading}
                 >
                     <span>{loading ? 'Loading' : 'Create Account'}</span>
                 </Button>
             </Form>
+            
             </div>
         </div>
     )

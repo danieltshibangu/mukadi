@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+// colors
+$black: #11101D;
+$background-yellow: rgba(#ffc124, 0.08);
+$inner-item-black: #191D21;
+$green: #6ED47C;
+$orange: #FF743C;
+$blue: #0D6EFD;
+$background-pale: #fff7e6;
+$sub-title-color: rgba($inner-item-black, 0.7);
+
+// fonts
+$jakarta: 'Plus Jakarta Sans';
+$poppins: 'Poppins';
+
+
+
+@media screen and (min-width: 1024px) { // 1900px
+    //For Laptops
+  
+    .root {
+      position: fixed;
+      width: 30%;
+      z-index: 1;;
+      height: 100vh;
+      left: 7%;
+      top: 0px;
+      background-color: $background-yellow;
+      //background: rgb(255, 116, 60, 0.1);
+      overflow-y: scroll;
+      color: $inner-item-black;
+    }
+
+    .rootWrapper {
+        font-family:  $jakarta;
+        font-size: 1em;;
+        padding-bottom: 40px;
+   }
+
+    .title {
+        font-size: 1.4em;
+        font-weight: 700;
+        letter-spacing: 0.05px;
+        padding: 0 10%;
+        padding-top: 13%;
+    }
+
+    .checkingsTotal {
+        margin-top: 50px;
+
+        .checkingTotalsWrapper {
+            padding: 0 10%;
+        }
+        .subTitle {
+            font-size: .9em;
+            font-weight: 500;
+            line-height: 10px;
+            color: $sub-title-color
+        }
+
+        .checkingsAmount {
+            font-size: 1.8em;
+            font-family: $jakarta;
+            font-weight: 800;
+
+            span {
+                margin-left: 10px
+            }
+        }
+
+        .accountsLink {
+            color: $sub-title-color;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-top: 10px;
+
+        }
+
+        .extraInfo {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+
+            .infoItem {
+                display: flex;
+                justify-content: space-between;
+                line-height: 30px;;
+                font-size: 0.9em;
+
+                .category {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    .colorBlock1 {
+                        $size: .6em;
+                        height: $size;
+                        width: $size;
+                        background-color: $green;
+                        border-radius: 100px;
+                    }
+
+                    .colorBlock2 {
+                        $size: .6em;
+                        height: $size;
+                        width: $size;
+                        background-color: $orange;
+                        border-radius: 100px;
+                    }
+                }
+
+                .subtitle {
+                    font-size: 0.9em;
+                }
+    
+                .infoData {
+                    font-weight: 500;
+                    font-family: $poppins;
+                }
+            }
+        }   // end of extra info for checkings
+    }   // end of checkings Total 
+
+
+    .checkingTotalsChart {
+        .checkingsChart {
+            height: 250px;
+            padding: 30px 10%;
+    
+            h2 {
+                font-size: 1em;
+                font-weight: 600;
+                line-height: 10px;
+            }
+    
+            .accountsLink {
+                margin: 0;
+                font-size: 0.8em;
+            }
+    
+            .chart {
+                height: 200px;
+                margin: 10px 0;
+            } 
+        }   // end of checkings graph
+    } // end of checking Totals Chart section
+
+    .savingsTotal {
+        margin-top: 50px;
+
+        .savingsTotalWrapper {
+            padding: 0 10%;
+        }
+
+        .subTitle {
+            font-size: .9em;
+            font-weight: 500;
+            line-height: 10px;
+            color: $sub-title-color
+        }
+
+        .savingsAmount {
+            font-size: 1.8em;
+            font-family: $jakarta;
+            font-weight: 800;
+
+            span {
+                margin-left: 10px
+            }
+        }
+
+        .accountsLink {
+            color: $sub-title-color;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-top: 10px;
+
+        }
+
+        .extraInfo {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+
+            .infoItem {
+                display: flex;
+                justify-content: space-between;
+                line-height: 30px;;
+                font-size: 0.9em;
+
+                .category {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    .colorBlock1 {
+                        $size: .6em;
+                        height: $size;
+                        width: $size;
+                        background-color: $green;
+                        border-radius: 100px;
+                    }
+
+                    .colorBlock2 {
+                        $size: .6em;
+                        height: $size;
+                        width: $size;
+                        background-color: $orange;
+                        border-radius: 100px;
+                    }
+                }
+
+                .subtitle {
+                    font-size: 0.9em;
+                }
+    
+                .infoData {
+                    font-weight: 500;
+                    font-family: $poppins;
+                }
+            } 
+        }   // end of extra info for savings
+    }   // end of savings total
+
+    .savingsTotalChart {
+        .savingsChart {
+            height: 250px;
+            padding: 30px 10%;
+    
+            h2 {
+                font-size: 1em;
+                font-weight: 600;
+                line-height: 10px;
+            }
+    
+            .accountsLink {
+                margin: 0;
+                font-size: 0.8em;
+            }
+    
+            .chart {
+                height: 200px;
+                margin: 10px 0;
+            } 
+        }   // end of checkings graph
+    } // end of checking Totals Chart section
+
+    .alerts {
+        width: 100%;
+        margin-top: 50px;
+        padding: 0px 10%;
+        display: none;
+
+        .alertsWrapper {
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            font-weight: 600;
+            line-height: 10px;
+            margin-bottom: 20px;
+        }
+
+        .bar {
+            height: 100px;
+            padding: 39px 0;
+            margin-bottom: -20px;
+            margin-top: -20px;;
+        }
+
+        article {
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            line-height: 35px;
+            flex-wrap: wrap;
+            column-gap: 50px;
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                p {
+                    font-size: .9em;;
+                }
+
+                .colorCode1 {
+                    background-color: $blue;
+                    $size: 10px;
+                    height: $size;
+                    width: $size;
+                }
+
+                .colorCode2 {
+                    background-color: $orange;
+                    $size: 10px;
+                    height: $size;
+                    width: $size;
+                }
+
+                .colorCode3 {
+                    background-color: $green;
+                    $size: 10px;
+                    height: $size;
+                    width: $size;
+                }
+            }
+        }
+    }
+}   // end of 1024 specifications
+
+
+@media screen and (min-width: 1440px) { 
+    .root {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 1900px) { 
+    .root {
+        width: 20%;
+        left: 5%;
+    }
+}

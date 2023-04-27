@@ -1,0 +1,137 @@
+
+
+.entirePage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f2f8ff;
+    transition: background-color 1s linear;
+}
+
+.innerPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: -10%;
+}
+
+.leftSide {
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar-logo {
+    height: 10vh;
+    width: 10vh;
+}
+
+.title {
+    font-weight: 400;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.text {
+    font-size: 1rem;
+    color: rgb(0, 0, 0, 0.6);
+    width: 25rem;
+    text-align: left;
+    font-weight: 300;
+}
+
+.rightSide {
+    display: flex;
+    align-items: center;   
+    flex-direction: column;
+    width: 50rem;
+    margin-top: 20rem;
+    height: 70vh;
+
+    .results {
+        .incomeMonth {
+            text-align: left;
+            font-size: 2rem;
+            font-weight: 300;
+            font-family: 'Montserrat';
+            margin-bottom: 1rem;
+        }
+
+        .wrapper {
+            padding-top: 1.5rem;
+            padding-left: 4rem;
+            height: 20rem;
+            box-shadow: rgba(0, 0, 0, 0.03) 5px 5px 4px 0px inset;
+            width: 40rem;
+            border-radius: 7px;
+            
+
+            .header {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+
+                .date {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #FF743C;
+                    border-radius: 50vh;
+                    
+                    $size: 4rem;
+                    height: $size; 
+                    width: $size;
+
+                    p {
+                        font-size: 2rem;;
+                        font-weight: 700;
+                        color: #fff;
+                    }
+                }
+
+                .paycheck {
+                    .employer {
+                        font-weight: 600;
+                        font-family: 'Montserrat';
+                        margin-bottom: -1rem;
+                        font-size: 1.2rem;
+                        color: #FFC700;
+                    }
+                    
+                    .amount {
+                        font-family: 'Shippori Mincho';
+                        font-weight: 700;
+                        font-size: 5rem;
+                        border-bottom: 10px dotted #6ED47C;
+                    }
+                }
+            }
+
+            .selections { 
+                margin-top: 2.5rem;
+            }
+
+            .footer {
+                margin-top: 4rem;
+                text-align: right;
+
+                p {
+                    font-weight: 600;
+                    padding-bottom: .5rem;;
+                }
+            }
+        }
+    }
+}
+
+
+.links {
+    width: 100%;
+    margin-top: 2rem;;
+
+    div {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}

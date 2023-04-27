@@ -1,0 +1,90 @@
+$green: #D9F0DC;
+$darkgreen:#7FD1AE;
+
+.entirePage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #F5FEFD;
+}
+
+.innerPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: -10%;
+}
+
+.leftSide {
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar-logo {
+    height: 10vh;
+    width: 10vh;
+}
+
+.title {
+    font-weight: 400;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.introCard p {
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0, 0.5);
+    width: 25rem;
+    text-align: left;
+    font-weight: 300;
+}
+
+.rightSide {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    flex-direction: column;
+    width: 50rem;
+    margin-top: 20rem;
+    height: 70vh;
+
+    .accountsFrame {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;   
+        flex-direction: column;
+        overflow-y:auto;
+   
+    }
+
+    .options {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+   
+
+    .border {
+        width: 60%;
+    }
+
+
+    i {
+        font-size: 2rem;
+        
+    }
+}
+
+.plaid-button { 
+    border:none;
+    background-color:transparent;
+    outline:none;
+}
+
+
+
+.continue-button { 
+    margin-top: 2rem;
+}
